@@ -3,7 +3,7 @@ import UpperSideBar from "./UpperSideBar";
 
 const LeftSideBarContainer = () => {
   return (
-    <div className="w-[420px] h-[70vh] flex flex-col gap-2">
+    <div className="w-[420px] h-full flex flex-col gap-2">
       <UpperSideBar />
       <LowerSideBar />
     </div>

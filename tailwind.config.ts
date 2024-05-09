@@ -16,6 +16,7 @@ const config: Config = {
         sectionColour: "#121212",
         lessFocusColour: "#B3B3B3",
         buttonColour: "#232323",
+        smallerSectionColour: "#242424",
       },
     },
   },
