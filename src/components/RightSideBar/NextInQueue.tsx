@@ -18,7 +18,7 @@ const NextInQueue = () => {
           className="roundex-xl"
         />
         <div>
-          <p className="text-white">Lost in the fire</p>
+          <p className="text-white">Starboy</p>
           <p className="text-lessFocusColour text-sm">The Weeknd</p>
         </div>
       </div>

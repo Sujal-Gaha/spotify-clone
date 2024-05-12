@@ -8,8 +8,8 @@ const Merch = () => {
       </div>
       <div className="w-full h-[216px] flex flex-col p-3">
         <div className="w-full h-16 flex items-center justify-center gap-3">
-          <Image alt="merch 1" src="/albumCover.png" width={55} height={55} />
-          <span className="text-white truncate">
+          <Image alt="merch 1" src="/merch1.png" width={55} height={55} />
+          <span className="text-white w-[276px] truncate">
             The Highlights (Deluxe) Digital Album
           </span>
         </div>
