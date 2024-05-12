@@ -1,20 +1,12 @@
 "use client";
 
+import useRecentStore from "@/store/recentsStore";
 import clsx from "clsx";
 import Image from "next/image";
-import { useState } from "react";
 import { FaCirclePlay } from "react-icons/fa6";
 
 const RecentlyPlayed = () => {
-  const [recents, setRecents] = useState<TRecent[]>([
-    {
-      _id: 0,
-      image: "/theWeekndMix.png",
-      title: "The Weeknd Mix",
-      featurings: "Chris Brown, Miguel and Chase Atlantic",
-      isHovering: false,
-    },
-  ]);
+  const { recents, setRecents } = useRecentStore();
 
   const handleMouseOver = (id: number) => {
     const updatedRecents = [...recents];
@@ -29,12 +21,12 @@ const RecentlyPlayed = () => {
   };
 
   return (
-    <div>
-      <p className="text-2xl text-white font-semibold">Recently Played</p>
+    <div className="flex flex-col gap-2">
+      <p className="text-2xl text-white font-semibold px-2">Recently Played</p>
       {recents.map((recent) => {
         return (
           <div
-            className="w-[204.8px] h-full p-2 hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300 flex flex-col gap-1 cursor-pointer"
+            className="w-[204.8px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
             key={recent._id}
             onMouseOver={() => handleMouseOver(recent._id)}
             onMouseLeave={() => handleMouseLeave(recent._id)}
