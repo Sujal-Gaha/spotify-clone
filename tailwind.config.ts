@@ -13,10 +13,12 @@ const config: Config = {
     extend: {
       colors: {
         mainColour: "#1ED760",
-        sectionColour: "#121212",
+        sectionColour: "#191919",
         lessFocusColour: "#B3B3B3",
         buttonColour: "#232323",
         smallerSectionColour: "#242424",
+        appBlack: "#0F0F0F",
+        profileContainerColour: "#509BF5",
       },
     },
   },

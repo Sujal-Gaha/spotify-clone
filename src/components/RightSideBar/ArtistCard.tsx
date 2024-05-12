@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ArtistCard = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="h-[259.95px] w-full">
         <Image
           src="/theWeeknd.png"
@@ -35,6 +35,11 @@ const ArtistCard = () => {
             multi-platform 3x...
           </p>
         </div>
+      </div>
+      <div>
+        <span className="text-white absolute top-4 left-4 font-semibold">
+          About the artist
+        </span>
       </div>
     </div>
   );
