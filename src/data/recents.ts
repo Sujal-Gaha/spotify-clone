@@ -1,4 +1,6 @@
-const recentContent = [
+import TRecent from "@/type/TRecent";
+
+const recentContent: TRecent[] = [
   {
     _id: 0,
     image: "/theWeekndMix.png",
