@@ -2,6 +2,7 @@ import HomePageRecommendation from "./HomePageRecommendation";
 import MoodCardContainer from "./MoodCardContainer";
 import RecentlyPlayed from "./RecentlyPlayed";
 import TodayBiggestHits from "./TodaysBiggestHits";
+import TrySomethingElse from "./TrySomethingElse";
 
 const HomePageContainer = () => {
   return (
@@ -9,6 +10,7 @@ const HomePageContainer = () => {
       <HomePageRecommendation />
       <RecentlyPlayed />
       <TodayBiggestHits />
+      <TrySomethingElse />
       <MoodCardContainer />
     </div>
   );

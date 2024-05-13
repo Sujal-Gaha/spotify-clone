@@ -1,24 +1,23 @@
 "use client";
 
-import useTodaysBiggestHitsStore from "@/store/todaysBiggestHitsStore";
+import useTrySomethingElseStore from "@/store/trySomethingElse";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
 
 const TodayBiggestHits = () => {
-  const { todaysBiggestHits, setTodaysBiggestHits } =
-    useTodaysBiggestHitsStore();
+  const { trySomethingElse, setTrySomethingElse } = useTrySomethingElseStore();
 
   const handleMouseOver = (id: number) => {
-    const updatedTodaysBiggestHits = [...todaysBiggestHits];
-    updatedTodaysBiggestHits[id].isHovering = true;
-    setTodaysBiggestHits(updatedTodaysBiggestHits);
+    const updatedTrySomethingElse = [...trySomethingElse];
+    updatedTrySomethingElse[id].isHovering = true;
+    setTrySomethingElse(updatedTrySomethingElse);
   };
 
   const handleMouseLeave = (id: number) => {
-    const updatedTodaysBiggestHits = [...todaysBiggestHits];
-    updatedTodaysBiggestHits[id].isHovering = false;
-    setTodaysBiggestHits(updatedTodaysBiggestHits);
+    const updatedTrySomethingElse = [...trySomethingElse];
+    updatedTrySomethingElse[id].isHovering = false;
+    setTrySomethingElse(updatedTrySomethingElse);
   };
 
   return (
@@ -32,10 +31,10 @@ const TodayBiggestHits = () => {
         </p>
       </div>
       <div className="h-[282px] flex">
-        {todaysBiggestHits.map((todaysBiggestHit) => {
+        {trySomethingElse.map((todaysBiggestHit) => {
           return (
             <div
-              className="w-full h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
+              className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
               key={todaysBiggestHit._id}
               onMouseOver={() => handleMouseOver(todaysBiggestHit._id)}
               onMouseLeave={() => handleMouseLeave(todaysBiggestHit._id)}
