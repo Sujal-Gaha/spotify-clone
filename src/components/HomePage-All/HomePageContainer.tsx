@@ -1,4 +1,5 @@
 import FeaturedCharts from "./FeaturedCharts";
+import FreshNewMusic from "./FreshNewMusic";
 import HomePageRecommendation from "./HomePageRecommendation";
 import MoodCardContainer from "./MoodCardContainer";
 import RecentlyPlayed from "./RecentlyPlayed";
@@ -16,6 +17,7 @@ const HomePageContainer = () => {
       <TrySomethingElse />
       <FeaturedCharts />
       <MoodCardContainer />
+      <FreshNewMusic />
     </div>
   );
 };
