@@ -1,6 +1,6 @@
 "use client";
 
-import useTrySomethingElseStore from "@/store/trySomethingElse";
+import useTrySomethingElseStore from "@/store/trySomethingElseStore";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
@@ -29,18 +29,18 @@ const TodayBiggestHits = () => {
         </p>
       </div>
       <div className="h-[282px] flex">
-        {trySomethingElse.map((todaysBiggestHit) => {
+        {trySomethingElse.map((somethingElse) => {
           return (
             <div
               className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
-              key={todaysBiggestHit._id}
-              onMouseOver={() => handleMouseOver(todaysBiggestHit._id)}
-              onMouseLeave={() => handleMouseLeave(todaysBiggestHit._id)}
+              key={somethingElse._id}
+              onMouseOver={() => handleMouseOver(somethingElse._id)}
+              onMouseLeave={() => handleMouseLeave(somethingElse._id)}
             >
               <div className="relative">
                 <Image
                   alt="album"
-                  src={todaysBiggestHit.image}
+                  src={somethingElse.image}
                   height={205}
                   width={205}
                   className="rounded-lg"
@@ -48,16 +48,16 @@ const TodayBiggestHits = () => {
                 <FaCirclePlay
                   className={clsx(
                     "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full hover:text-[56px] hover:bottom-1 hover:right-1 z-10",
-                    todaysBiggestHit.isHovering ? "block" : "hidden"
+                    somethingElse.isHovering ? "block" : "hidden"
                   )}
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <p className="text-white font-semibold">
-                  {todaysBiggestHit.title}
+                  {somethingElse.title}
                 </p>
                 <p className="text-lessFocusColour text-sm font-medium">
-                  {todaysBiggestHit.description}
+                  {somethingElse.description}
                 </p>
               </div>
             </div>

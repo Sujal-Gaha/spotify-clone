@@ -1,7 +1,6 @@
 "use client";
 
 import useThrowbackStore from "@/store/throwbackStore";
-import useTrySomethingElseStore from "@/store/trySomethingElse";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
