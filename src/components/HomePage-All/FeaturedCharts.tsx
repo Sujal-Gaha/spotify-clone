@@ -1,46 +1,46 @@
 "use client";
 
-import useTrySomethingElseStore from "@/store/trySomethingElse";
+import useFeaturedChartsStore from "@/store/featuredChartsStore";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
 
-const TodayBiggestHits = () => {
-  const { trySomethingElse, setTrySomethingElse } = useTrySomethingElseStore();
+const FeaturedCharts = () => {
+  const { featuredCharts, setFeaturedCharts } = useFeaturedChartsStore();
 
   const handleMouseOver = (id: number) => {
-    const updatedTrySomethingElse = [...trySomethingElse];
-    updatedTrySomethingElse[id].isHovering = true;
-    setTrySomethingElse(updatedTrySomethingElse);
+    const updatedFeaturedCharts = [...featuredCharts];
+    updatedFeaturedCharts[id].isHovering = true;
+    setFeaturedCharts(updatedFeaturedCharts);
   };
 
   const handleMouseLeave = (id: number) => {
-    const updatedTrySomethingElse = [...trySomethingElse];
-    updatedTrySomethingElse[id].isHovering = false;
-    setTrySomethingElse(updatedTrySomethingElse);
+    const updatedFeaturedCharts = [...featuredCharts];
+    updatedFeaturedCharts[id].isHovering = false;
+    setFeaturedCharts(updatedFeaturedCharts);
   };
 
   return (
     <div className="flex flex-col gap-2">
       <div className="w-full flex justify-between items-center px-2">
-        <p className="text-2xl text-white font-semibold">Try something else</p>
+        <p className="text-2xl text-white font-semibold">Featured Charts</p>
         <p className="text-sm text-lessFocusColour font-semibold hover:underline cursor-pointer">
           Show all
         </p>
       </div>
       <div className="h-[282px] flex">
-        {trySomethingElse.map((todaysBiggestHit) => {
+        {featuredCharts.map((featuredChart) => {
           return (
             <div
               className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
-              key={todaysBiggestHit._id}
-              onMouseOver={() => handleMouseOver(todaysBiggestHit._id)}
-              onMouseLeave={() => handleMouseLeave(todaysBiggestHit._id)}
+              key={featuredChart._id}
+              onMouseOver={() => handleMouseOver(featuredChart._id)}
+              onMouseLeave={() => handleMouseLeave(featuredChart._id)}
             >
               <div className="relative">
                 <Image
                   alt="album"
-                  src={todaysBiggestHit.image}
+                  src={featuredChart.image}
                   height={205}
                   width={205}
                   className="rounded-lg"
@@ -48,16 +48,16 @@ const TodayBiggestHits = () => {
                 <FaCirclePlay
                   className={clsx(
                     "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full z-10",
-                    todaysBiggestHit.isHovering ? "block" : "hidden"
+                    featuredChart.isHovering ? "block" : "hidden"
                   )}
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <p className="text-white font-semibold">
-                  {todaysBiggestHit.title}
+                  {featuredChart.title}
                 </p>
                 <p className="text-lessFocusColour text-sm font-medium">
-                  {todaysBiggestHit.description}
+                  {featuredChart.description}
                 </p>
               </div>
             </div>
@@ -68,4 +68,4 @@ const TodayBiggestHits = () => {
   );
 };
 
-export default TodayBiggestHits;
+export default FeaturedCharts;

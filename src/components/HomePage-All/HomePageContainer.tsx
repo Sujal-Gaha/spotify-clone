@@ -1,3 +1,4 @@
+import FeaturedCharts from "./FeaturedCharts";
 import HomePageRecommendation from "./HomePageRecommendation";
 import MoodCardContainer from "./MoodCardContainer";
 import RecentlyPlayed from "./RecentlyPlayed";
@@ -11,6 +12,7 @@ const HomePageContainer = () => {
       <RecentlyPlayed />
       <TodayBiggestHits />
       <TrySomethingElse />
+      <FeaturedCharts />
       <MoodCardContainer />
     </div>
   );
