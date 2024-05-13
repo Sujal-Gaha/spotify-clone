@@ -49,7 +49,7 @@ const HomePageRecommendation = () => {
                 />
                 <FaCirclePlay
                   className={clsx(
-                    "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full z-10",
+                    "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full hover:text-[56px] hover:bottom-1 hover:right-1 z-10",
                     recommendation.isHovering ? "block" : "hidden"
                   )}
                 />
