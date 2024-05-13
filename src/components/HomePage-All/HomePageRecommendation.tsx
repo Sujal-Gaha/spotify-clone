@@ -54,7 +54,7 @@ const HomePageRecommendation = () => {
                   )}
                 />
               </div>
-              <div className="flex flex-col gap-2 px-2">
+              <div className="flex flex-col gap-2">
                 <p className="text-white font-semibold">
                   {recommendation.name}
                 </p>

@@ -1,50 +1,46 @@
 "use client";
 
-import ActiveHomeIcon from "@/icons/ActiveHome";
-import ActiveSearchIcon from "@/icons/ActiveSearch";
-import DefaultHomeIcon from "@/icons/DefaultHome";
-import DefaultSearchIcon from "@/icons/DefaultSearch";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FiSearch } from "react-icons/fi";
+import { GoHome, GoHomeFill } from "react-icons/go";
 
 const UpperSideBar = () => {
-  const location = usePathname();
+  const path = usePathname();
 
   return (
     <div className="h-28 bg-sectionColour px-3 py-2 rounded-lg">
       <div className="flex flex-col h-24 w-full items-center justify-center gap-2">
         <div className="w-[396px] flex justify-center">
-          <div className="flex h-10 w-[372px] items-center">
-            <Link href={"/"} className="flex items-center gap-5">
-              {location === "/" ? <ActiveHomeIcon /> : <DefaultHomeIcon />}
-              <p
-                className={clsx(
-                  "font-bold text-base hover:underline",
-                  location === "/" ? "text-white" : "text-lessFocusColour"
-                )}
-              >
-                Home
-              </p>
+          <div className="flex h-10 w-[372px] items-center ">
+            <Link
+              href={"/"}
+              className={clsx(
+                "flex items-center gap-5 hover:text-white ease-in-out duration-500",
+                path === "/" ? "text-white" : "text-lessFocusColour"
+              )}
+            >
+              {path === "/" ? (
+                <GoHomeFill className="text-[28px]" />
+              ) : (
+                <GoHome className="text-[28px]" />
+              )}
+              <p className="font-bold text-base active:underline">Home</p>
             </Link>
           </div>
         </div>
         <div className="w-[396px] flex justify-center">
           <div className="flex h-10 w-[372px] items-center">
-            <Link href={"/search"} className="flex items-center gap-5">
-              {location === "/search" ? (
-                <ActiveSearchIcon />
-              ) : (
-                <DefaultSearchIcon />
+            <Link
+              href={"/search"}
+              className={clsx(
+                "flex items-center gap-5 hover:text-white ease-in-out duration-500",
+                path === "/search" ? "text-white" : "text-lessFocusColour"
               )}
-              <p
-                className={clsx(
-                  "font-bold text-base hover:underline",
-                  location === "/search" ? "text-white" : "text-lessFocusColour"
-                )}
-              >
-                Search
-              </p>
+            >
+              <FiSearch className="text-[27px]" />
+              <p className="font-bold text-base active:underline">Search</p>
             </Link>
           </div>
         </div>

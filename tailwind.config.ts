@@ -17,6 +17,8 @@ const config: Config = {
         lessFocusColour: "#B3B3B3",
         buttonColour: "#232323",
         smallerSectionColour: "#242424",
+        activeSmallerSectionColour: "#3E3E3E",
+        hoverSmallerSectionColour: "#3E3E3E",
         appBlack: "#0F0F0F",
         profileContainerColour: "#509BF5",
       },

@@ -49,7 +49,7 @@ const RecentlyPlayed = () => {
                 {recent.title}
               </span>
             </div>
-            <div className="flex flex-col gap-2 px-2">
+            <div className="flex flex-col gap-2">
               <p className="text-white font-semibold">The Weeknd Mix</p>
               <p className="text-lessFocusColour text-sm font-medium">
                 {recent.featurings}
