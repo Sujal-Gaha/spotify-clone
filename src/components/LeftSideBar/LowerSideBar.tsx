@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { PiMusicNotesPlus } from "react-icons/pi";
 import { FaRegFolder } from "react-icons/fa";
+import Link from "next/link";
 
 const LowerSideBar = () => {
   type TPlaylist = {
@@ -31,14 +32,17 @@ const LowerSideBar = () => {
     <div className="bg-sectionColour rounded-lg flex flex-col">
       <div className="h-14 flex items-center justify-center px-4 py-2">
         <div className="h-10 w-[388px] flex justify-between px-1">
-          <div className="flex items-center w-[142px] gap-4 justify-center">
+          <Link
+            href={"/playlist"}
+            className="flex items-center w-[142px] gap-4 justify-center"
+          >
             <DefaultLibraryIcon />
-            <p className="text-white">Your Library</p>
-          </div>
+            <p className="text-white font-medium">Your Library</p>
+          </Link>
           <div className="flex items-center justify-center gap-1">
             <div className="p-2 relative">
               <FaPlus
-                className="text-lessFocusColour cursor-pointer"
+                className="text-lessFocusColour cursor-pointer hover:text-white duration-500 ease-in-out"
                 onClick={() => {
                   setIsCreatePlaylistModalOpen(true);
                   setTimeout(() => {
@@ -47,14 +51,14 @@ const LowerSideBar = () => {
                 }}
               />
               {isCreatePlaylistModalOpen && (
-                <div className="absolute top-10 left-2 h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col">
-                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour">
+                <div className="absolute top-10 left-2 h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col z-10">
+                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour active:bg-activeSmallerSectionColour">
                     <PiMusicNotesPlus className="text-lg" />
                     <div className="text-sm w-[148px]">
                       Create a new playlist
                     </div>
                   </div>
-                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour">
+                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour active:bg-activeSmallerSectionColour">
                     <FaRegFolder className="text-lg" />
                     <div className="text-sm w-[148px]">
                       Create a playlist folder
@@ -65,30 +69,31 @@ const LowerSideBar = () => {
             </div>
 
             <div className="p-2">
-              <FaArrowRight className="text-lessFocusColour cursor-pointer" />
+              <FaArrowRight className="text-lessFocusColour cursor-pointer hover:text-white duration-500 ease-in-out" />
             </div>
           </div>
         </div>
       </div>
       <div className="h-12 flex items-center px-4">
-        <button className="px-3 py-1 bg-buttonColour rounded-xl text-white text-sm shadow">
+        <button className="px-3 py-1 bg-buttonColour rounded-xl text-white text-sm shadow hover:bg-hoverSmallerSectionColour ease-in-out duration-500">
           Playlists
         </button>
       </div>
       <div className="h-[715px] flex flex-col items-center justify-start gap-2 pt-0 px-2 pb-2">
         <div className="h-[34px] w-[404px] pt-[2px] pr-1 pb-0 pl-2 flex justify-between">
           <div className="h-8 w-8 flex justify-center items-center text-lessFocusColour text-xl">
-            <CiSearch className="cursor-pointer" />
+            <CiSearch className="cursor-pointer hover:text-white ease-in-out duration-500" />
           </div>
-          <div className="h-8 w-[99.31px] py-1 pr-3 pl-4 flex items-center justify-center gap-1 text-lessFocusColour cursor-pointer">
+          <div className="h-8 w-[99.31px] py-1 pr-3 pl-4 flex items-center justify-center gap-1 text-lessFocusColour cursor-pointer hover:text-white ease-in-out duration-500">
             <p className="text-sm">Recents</p>
             <MdOutlineStorage />
           </div>
         </div>
         {playlists.map((playlist) => {
           return (
-            <div
-              className="h-16 w-[404px] flex justify-start p-2 gap-3"
+            <Link
+              href={"/playlist/1"}
+              className="h-16 w-[404px] flex justify-start p-2 gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-500 rounded"
               key={playlist._id}
             >
               <div className="h-12 w-12">
@@ -106,7 +111,7 @@ const LowerSideBar = () => {
                   Playlist . Sujal Gaha
                 </p>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

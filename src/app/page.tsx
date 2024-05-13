@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HomePageContentChanger from "@/components/HomePageContentChanger";
-import HomePageContainer from "@/components/HomePageContainer";
+import HomePageContainer from "@/components/HomePage-All/HomePageContainer";
 
 export default function Home() {
   return (

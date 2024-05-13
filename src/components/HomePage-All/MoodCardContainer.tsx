@@ -52,7 +52,7 @@ const MoodCardContainer = () => {
                   )}
                 />
               </div>
-              <div className="flex flex-col gap-2 px-2">
+              <div className="flex flex-col gap-2">
                 <p className="text-white font-semibold">{mood.title}</p>
                 <p className="text-lessFocusColour text-sm font-medium">
                   {mood.description}
