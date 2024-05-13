@@ -1,4 +1,6 @@
-const moodContent = [
+import TMood from "@/type/TMood";
+
+const moodContent: TMood[] = [
   {
     _id: 0,
     image: "/chillHits.png",

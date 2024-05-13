@@ -1,4 +1,6 @@
-const recommendationContent = [
+import TRecommendation from "@/type/TRecommendation";
+
+const recommendationContent: TRecommendation[] = [
   {
     _id: 0,
     image: "/joji.png",
