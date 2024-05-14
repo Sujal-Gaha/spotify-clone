@@ -54,13 +54,12 @@ const HomePageContainer = () => {
             </div>
             <div className="h-[282px] flex">
               {allContent.content.map((content) => {
-                const contentId = content._id;
                 return (
                   <div
                     className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
                     key={content._id}
-                    onMouseLeave={() => handleMouseLeave(contentId)}
-                    onMouseOver={() => handleMouseOver(contentId)}
+                    onMouseLeave={() => handleMouseLeave(content._id)}
+                    onMouseOver={() => handleMouseOver(content._id)}
                   >
                     <div className="relative">
                       <Image
