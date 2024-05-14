@@ -26,7 +26,7 @@ const todaysBiggestHitsContent: TTodaysBiggestHits[] = [
     _id: 3,
     image: "/todaysBiggestHits/megaHitMix.png",
     title: "Mega Hit Mix",
-    description: "A mega mix of 75 favourites from the last few years!",
+    description: "A mega mix of 75 favourites from the last...",
     isHovering: false,
   },
   {
