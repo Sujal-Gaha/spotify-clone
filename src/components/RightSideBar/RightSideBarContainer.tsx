@@ -1,5 +1,3 @@
-import { BsThreeDots } from "react-icons/bs";
-import { IoMdClose } from "react-icons/io";
 import NextInQueue from "./NextInQueue";
 import Merch from "./Merch";
 import Credits from "./Credits";

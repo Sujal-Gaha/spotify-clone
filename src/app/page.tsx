@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HomePageContentChanger from "@/components/HomePageContentChanger";
 import HomePageContainerAll from "@/components/HomePageContainerAll";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
