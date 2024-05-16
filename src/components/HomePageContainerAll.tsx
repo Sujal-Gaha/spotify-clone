@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import useHomePageAllContentStore from "@/store/homePageAllContentStore";
 
-const HomePageContainer = () => {
+const HomePageContainerAll = () => {
   const { homePageAllContent, setHomePageAllContent } =
     useHomePageAllContentStore();
 
@@ -95,4 +95,4 @@ const HomePageContainer = () => {
   );
 };
 
-export default HomePageContainer;
+export default HomePageContainerAll;
