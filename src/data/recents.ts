@@ -5,7 +5,7 @@ const recentContent: TRecent[] = [
     _id: 0,
     image: "/recent/theWeekndMix.png",
     title: "The Weeknd Mix",
-    featurings: "Chris Brown, Miguel and Chase Atlantic",
+    description: "Chris Brown, Miguel and Chase Atlantic",
     isHovering: false,
   },
 ];

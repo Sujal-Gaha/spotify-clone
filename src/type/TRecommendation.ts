@@ -1,8 +1,8 @@
 type TRecommendation = {
   _id: number;
   image: string;
-  name: string;
-  profession: string;
+  title: string;
+  description: string;
   isHovering: boolean;
 };
 
