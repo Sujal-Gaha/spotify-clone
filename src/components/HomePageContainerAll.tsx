@@ -11,26 +11,27 @@ const HomePageContainerAll = () => {
   const { homePageAllContent, setHomePageAllContent } =
     useHomePageAllContentStore();
 
-  const [index, setIndex] = useState(NaN);
+  const [containerId, setContainerId] = useState(NaN);
+  const [cardId, setCardId] = useState(NaN);
 
-  const handleMouseOver = (id: number) => {
+  const handleMouseOver = () => {
     const updatedHomePageAllContent = [...homePageAllContent];
     if (
-      updatedHomePageAllContent[index] &&
-      updatedHomePageAllContent[index].content[id]
+      updatedHomePageAllContent[containerId] &&
+      updatedHomePageAllContent[containerId].content[cardId]
     ) {
-      updatedHomePageAllContent[index].content[id].isHovering = true;
+      updatedHomePageAllContent[containerId].content[cardId].isHovering = true;
       setHomePageAllContent(updatedHomePageAllContent);
     }
   };
 
-  const handleMouseLeave = (id: number) => {
+  const handleMouseLeave = () => {
     const updatedHomePageAllContent = [...homePageAllContent];
     if (
-      updatedHomePageAllContent[index] &&
-      updatedHomePageAllContent[index].content[id]
+      updatedHomePageAllContent[containerId] &&
+      updatedHomePageAllContent[containerId].content[cardId]
     ) {
-      updatedHomePageAllContent[index].content[id].isHovering = false;
+      updatedHomePageAllContent[containerId].content[cardId].isHovering = false;
       setHomePageAllContent(updatedHomePageAllContent);
     }
   };
@@ -43,8 +44,14 @@ const HomePageContainerAll = () => {
             <div
               className="flex flex-col gap-2"
               key={allContent.mainId}
-              onMouseLeave={() => setIndex(NaN)}
-              onMouseOver={() => setIndex(allContent.mainId)}
+              onMouseLeave={() => {
+                handleMouseLeave();
+                setContainerId(NaN);
+              }}
+              onMouseOver={() => {
+                handleMouseOver();
+                setContainerId(allContent.mainId);
+              }}
             >
               <div className="w-full flex justify-between items-center px-2">
                 <p className="text-2xl text-white font-semibold">
@@ -60,8 +67,14 @@ const HomePageContainerAll = () => {
                     <div
                       className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
                       key={content._id}
-                      onMouseLeave={() => handleMouseLeave(content._id)}
-                      onMouseOver={() => handleMouseOver(content._id)}
+                      onMouseLeave={() => {
+                        setCardId(NaN);
+                        handleMouseLeave();
+                      }}
+                      onMouseOver={() => {
+                        setCardId(content._id);
+                        handleMouseOver();
+                      }}
                     >
                       <div className="relative">
                         <Image

@@ -25,7 +25,7 @@ const Merch = () => {
             src="/merch2.png"
             width={45}
             height={45}
-            className="w-auto h-auto"
+            className="w-auto"
           />
           <p className="text-white w-[276px] truncate">
             Live at SoFi Stadium Clean Digital Album
