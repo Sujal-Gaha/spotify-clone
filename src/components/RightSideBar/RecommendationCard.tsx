@@ -1,6 +1,5 @@
-import AddIcon from "@/icons/Add";
+import AddedIcon from "@/icons/AudioController/Added";
 import Image from "next/image";
-import { FiPlusCircle } from "react-icons/fi";
 
 const RecommendationCard = () => {
   return (
@@ -17,12 +16,12 @@ const RecommendationCard = () => {
       <div className="flex justify-between items-center h-[51px] w-[388px]">
         <div className="flex flex-col h-full w-full">
           <p className="text-white text-2xl">One Of The Girls</p>
-          <p className="text-lessFocusColour text-base">
+          <p className="text-lessFocusColour text-sm">
             The Weeknd, JENNIE, Lily-Rose Depp
           </p>
         </div>
         <div className="h-full flex items-center">
-          <AddIcon />
+          <AddedIcon />
         </div>
       </div>
     </div>
