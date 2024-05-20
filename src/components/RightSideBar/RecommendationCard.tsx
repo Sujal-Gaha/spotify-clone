@@ -1,3 +1,4 @@
+import AddIcon from "@/icons/Add";
 import Image from "next/image";
 import { FiPlusCircle } from "react-icons/fi";
 
@@ -21,7 +22,7 @@ const RecommendationCard = () => {
           </p>
         </div>
         <div className="h-full flex items-center">
-          <FiPlusCircle className="text-xl text-lessFocusColour" />
+          <AddIcon />
         </div>
       </div>
     </div>

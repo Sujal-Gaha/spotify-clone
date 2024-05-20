@@ -21,6 +21,7 @@ const config: Config = {
         hoverSmallerSectionColour: "#3E3E3E",
         appBlack: "#0F0F0F",
         profileContainerColour: "#509BF5",
+        playlistBarColour: "#2A2A2A",
       },
     },
   },

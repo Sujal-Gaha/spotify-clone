@@ -29,7 +29,7 @@ const LowerSideBar = () => {
     useState(false);
 
   return (
-    <div className="bg-sectionColour rounded-lg flex flex-col">
+    <div className="bg-sectionColour rounded-lg flex flex-col h-full">
       <div className="h-14 flex items-center justify-center px-4 py-2">
         <div className="h-10 w-[388px] flex justify-between px-1">
           <Link
@@ -79,7 +79,7 @@ const LowerSideBar = () => {
           Playlists
         </button>
       </div>
-      <div className="h-[715px] flex flex-col items-center justify-start gap-2 pt-0 px-2 pb-2">
+      <div className="h-full flex flex-col items-center justify-start gap-2 pt-0 px-2 pb-2">
         <div className="h-[34px] w-[404px] pt-[2px] pr-1 pb-0 pl-2 flex justify-between">
           <div className="h-8 w-8 flex justify-center items-center text-lessFocusColour text-xl">
             <CiSearch className="cursor-pointer hover:text-white ease-in-out duration-500" />

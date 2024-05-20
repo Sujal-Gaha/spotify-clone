@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const NextInQueue = () => {
   return (
-    <div className="bg-smallerSectionColour w-[388px] h-[119px] rounded-xl p-4 flex flex-col justify-center gap-1 mb-4">
+    <div className="bg-smallerSectionColour w-[388px] h-[119px] rounded-xl p-4 flex flex-col justify-center gap-1">
       <div className="w-full h-[25px] flex justify-between items-center">
         <span className="text-white">Next in queue</span>
         <span className="text-lessFocusColour text-sm">Open queue</span>

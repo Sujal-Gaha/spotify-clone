@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import useHomePageAllContentStore from "@/store/homePageAllContentStore";
 import Footer from "./Footer";
+import PlaylistBar from "./PlaylistBar";
 
 const HomePageContainerAll = () => {
   const { homePageAllContent, setHomePageAllContent } =
@@ -37,8 +38,9 @@ const HomePageContainerAll = () => {
   };
 
   return (
-    <>
-      <div className="h-full w-full pt-0 pb-6 px-6 flex flex-col gap-8 overflow-y-auto">
+    <div className="flex flex-col overflow-y-auto px-5">
+      <PlaylistBar />
+      <div className="h-full w-full pt-0 pb-6 flex flex-col gap-8 ">
         {homePageAllContent.map((allContent) => {
           return (
             <div
@@ -87,7 +89,7 @@ const HomePageContainerAll = () => {
                         <FaCirclePlay
                           className={clsx(
                             "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full hover:text-[56px] hover:bottom-1 hover:right-1 z-10",
-                            content.isHovering ? "block" : "hidden"
+                            content.isHovering ? "block duration-200" : "hidden"
                           )}
                         />
                       </div>
@@ -108,7 +110,7 @@ const HomePageContainerAll = () => {
         })}
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
