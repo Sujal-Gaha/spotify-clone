@@ -11,22 +11,43 @@ import { FaRegFolder } from "react-icons/fa";
 import Link from "next/link";
 
 const LowerSideBar = () => {
+  const [count, setCount] = useState(2);
+
   type TPlaylist = {
-    _id: number;
     image: string;
-    artist: string;
+    title: string;
   };
 
   const [playlists, setPlaylists] = useState<TPlaylist[]>([
     {
-      _id: 0,
       image: "/theIdol.png",
-      artist: "The Weeknd",
+      title: "The Weeknd",
     },
   ]);
 
   const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] =
     useState(false);
+
+  const handleCreateNewPlaylist = () => {
+    const newObject = {
+      image: "/theIdol.png",
+      title: `My Playlist #${count}`,
+    };
+    const updatedPlaylist = [newObject].concat(playlists);
+    console.log("Handle Create new playlist ", updatedPlaylist);
+    setPlaylists(updatedPlaylist);
+    setCount(count + 1);
+  };
+
+  const handleCreatePlaylistFolder = () => {
+    const newObject = {
+      image: "/theIdol.png",
+      title: "New Folder",
+    };
+    const updatedPlaylist = [newObject].concat(playlists);
+    console.log("Handle Create new playlist ", updatedPlaylist);
+    setPlaylists(updatedPlaylist);
+  };
 
   return (
     <div className="bg-sectionColour rounded-lg flex flex-col h-full">
@@ -52,13 +73,25 @@ const LowerSideBar = () => {
               />
               {isCreatePlaylistModalOpen && (
                 <div className="absolute top-10 left-2 h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col z-10">
-                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour active:bg-activeSmallerSectionColour">
+                  <div
+                    className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour hover:bg-activeSmallerSectionColour cursor-pointer"
+                    onClick={() => {
+                      setIsCreatePlaylistModalOpen(false);
+                      handleCreateNewPlaylist();
+                    }}
+                  >
                     <PiMusicNotesPlus className="text-lg" />
                     <div className="text-sm w-[148px]">
                       Create a new playlist
                     </div>
                   </div>
-                  <div className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour active:bg-activeSmallerSectionColour">
+                  <div
+                    className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour hover:bg-activeSmallerSectionColour cursor-pointer"
+                    onClick={() => {
+                      setIsCreatePlaylistModalOpen(false);
+                      handleCreatePlaylistFolder();
+                    }}
+                  >
                     <FaRegFolder className="text-lg" />
                     <div className="text-sm w-[148px]">
                       Create a playlist folder
@@ -89,12 +122,12 @@ const LowerSideBar = () => {
             <MdOutlineStorage />
           </div>
         </div>
-        {playlists.map((playlist) => {
+        {playlists.map((playlist, index) => {
           return (
             <Link
               href={"/playlist/1"}
               className="h-16 w-[404px] flex justify-start p-2 gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-500 rounded"
-              key={playlist._id}
+              key={index}
             >
               <div className="h-12 w-12">
                 <Image
@@ -106,7 +139,7 @@ const LowerSideBar = () => {
                 />
               </div>
               <div className="flex flex-col justify-center gap-1">
-                <p className="text-white text-sm">{playlist.artist}</p>
+                <p className="text-white text-sm">{playlist.title}</p>
                 <p className="text-lessFocusColour text-xs">
                   Playlist . Sujal Gaha
                 </p>
