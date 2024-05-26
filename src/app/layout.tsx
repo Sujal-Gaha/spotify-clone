@@ -16,9 +16,7 @@ export default function RootLayout({
           {children}
           <RightSideBarContainer />
         </div>
-        <div>
-          <AudioController />
-        </div>
+        <AudioController />
       </body>
     </html>
   );
