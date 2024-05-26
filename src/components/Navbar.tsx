@@ -3,12 +3,17 @@
 import DownloadIcon from "@/icons/Download";
 import LeftArrowIcon from "@/icons/LeftArrow";
 import RightArrowIcon from "@/icons/RightArrow";
+import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { GoBell } from "react-icons/go";
 
 const Navbar = () => {
   const path = usePathname();
+
+  const [isSearchFieldFocused, setIsSearchFieldFocused] =
+    useState<Boolean>(false);
 
   return (
     <div className="py-4 px-6 h-16 w-full flex justify-between">
@@ -18,11 +23,18 @@ const Navbar = () => {
         {path === "/search" && (
           <div className="relative text-lessFocusColour">
             <input
-              className="py-[6px] px-9 bg-smallerSectionColour h-12 w-[364px] rounded-3xl border-none"
+              className="py-[6px] px-9 bg-smallerSectionColour h-12 w-[364px] rounded-3xl border-2 border-transparent m-0 focus:border-white"
               type="text"
               placeholder="What do you want to play?"
+              onFocus={() => setIsSearchFieldFocused(true)}
+              onBlur={() => setIsSearchFieldFocused(false)}
             />
-            <FiSearch className="absolute text-lg top-[15px] left-3" />
+            <FiSearch
+              className={clsx(
+                "absolute text-lg top-[15px] left-3",
+                isSearchFieldFocused && "text-white font-extrabold"
+              )}
+            />
           </div>
         )}
       </div>
