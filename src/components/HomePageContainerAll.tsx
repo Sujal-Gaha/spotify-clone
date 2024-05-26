@@ -38,7 +38,7 @@ const HomePageContainerAll = () => {
   };
 
   return (
-    <div className="flex flex-col overflow-y-auto px-5">
+    <div className="flex flex-col overflow-y-auto px-5 w-full">
       <PlaylistBar />
       <div className="h-full w-full pt-0 pb-6 flex flex-col gap-8 ">
         {homePageAllContent.map((allContent) => {
