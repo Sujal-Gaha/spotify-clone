@@ -1,24 +1,14 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import HomePageContentChanger from "@/components/HomePageContentChanger";
-import HomePageContainerAll from "@/components/HomePageContainerAll";
-import useRightSideBarStore from "@/store/RightSideBarStore";
-import clsx from "clsx";
+import All from "@/components/All";
+import { usePathname } from "next/navigation";
+import Music from "./music/page";
+import Podcasts from "./podcasts/page";
 
 export default function Home() {
-  const { isRightSideBarVisible } = useRightSideBarStore();
+  const path = usePathname();
 
   return (
-    <div
-      className={clsx(
-        "h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center gap-2",
-        isRightSideBarVisible ? "w-[1048px]" : "w-full"
-      )}
-    >
-      <Navbar />
-      <HomePageContentChanger />
-      <HomePageContainerAll />
-    </div>
+    <>{path === "/" ? <All /> : path === "/music" ? <Music /> : <Podcasts />}</>
   );
 }

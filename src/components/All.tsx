@@ -8,7 +8,7 @@ import useHomePageAllContentStore from "@/store/homePageAllContentStore";
 import Footer from "./Footer";
 import PlaylistBar from "./PlaylistBar";
 
-const HomePageContainerAll = () => {
+const All = () => {
   const { homePageAllContent, setHomePageAllContent } =
     useHomePageAllContentStore();
 
@@ -114,4 +114,4 @@ const HomePageContainerAll = () => {
   );
 };
 
-export default HomePageContainerAll;
+export default All;
