@@ -59,7 +59,7 @@ const All = () => {
                 <p className="text-2xl text-white font-semibold">
                   {allContent.mainTitle}
                 </p>
-                <p className="text-sm text-lessFocusColour font-semibold hover:underline cursor-pointer">
+                <p className="text-sm text-lessFocusColour font-semibold hover:underline hover:text-white ease-in-out duration-200 cursor-pointer">
                   Show all
                 </p>
               </div>

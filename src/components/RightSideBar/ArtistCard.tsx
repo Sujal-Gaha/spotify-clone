@@ -16,14 +16,14 @@ const ArtistCard = () => {
         <div>
           <p className="text-white">The Weeknd</p>
         </div>
-        <div className="flex justify-between pt-2 px-0 pb-3 h-[52px] w-full">
+        <div className="flex justify-between items-center pt-2 px-0 pb-3 h-[52px] w-full">
           <div>
             <p className="text-lessFocusColour">
               110,915,289 monthly listeners
             </p>
           </div>
           <div>
-            <button className="text-white text-sm border py-[3px] px-[15px] rounded-lg">
+            <button className="text-white text-sm border py-[3px] px-[15px] rounded-xl hover:py-1 hover:px-4 hover:text-[15px] duration-150 ease-in-out">
               Follow
             </button>
           </div>

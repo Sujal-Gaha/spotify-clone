@@ -1,11 +1,9 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import searchGenres from "@/data/searchGenre";
 
 const SearchPage = () => {
   return (
-    <div className="w-[1048px] h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center">
-      <Navbar />
+    <div className="w-[1048px] h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center overflow-y-auto">
       <div className="w-full px-6 pt-16 h-full overflow-y-auto">
         <div>
           <h1 className="text-2xl text-white">Browse All</h1>
