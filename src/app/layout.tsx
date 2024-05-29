@@ -8,6 +8,7 @@ import useRightSideBarStore from "@/store/RightSideBarStore";
 import HomePageContentChanger from "@/components/HomePageContentChanger";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
@@ -15,6 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const { isRightSideBarVisible } = useRightSideBarStore();
+
+  const path = usePathname();
 
   return (
     <html lang="en">
@@ -28,7 +31,7 @@ export default function RootLayout({
             )}
           >
             <Navbar />
-            <HomePageContentChanger />
+            {path !== "/search" && <HomePageContentChanger />}
             {children}
           </div>
           {isRightSideBarVisible && <RightSideBarContainer />}

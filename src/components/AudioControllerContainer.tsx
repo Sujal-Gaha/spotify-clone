@@ -14,7 +14,7 @@ import PlayIcon from "@/icons/AudioController/Play";
 import PreviousSongIcon from "@/icons/AudioController/PreviousSong";
 import QueueIcon from "@/icons/AudioController/Queue";
 import ShufflePlaylistIcon from "@/icons/AudioController/ShufflePlaylist";
-// import TimePlayedIcon from "@/icons/AudioController/TimePlayed";
+import TimePlayedIcon from "@/icons/AudioController/TimePlayed";
 import useSongStore from "@/store/songStore";
 import { Slider } from "antd";
 import Image from "next/image";
@@ -51,12 +51,12 @@ const AudioControllerContainer = () => {
           <LoopIcon />
         </div>
         <div className="h-[17px] w-full flex items-center justify-center gap-4 text-lessFocusColour">
-          {/* <span>4:07</span>
+          <span>4:07</span>
           <TimePlayedIcon />
-          <span>5:10</span> */}
-          <audio controls>
+          <span>5:10</span>
+          {/* <audio controls>
             <source src="Swim.mp3" type="audio/mpeg" />
-          </audio>
+          </audio> */}
         </div>
       </div>
       <div className="h-[57px] w-[571.19px] flex items-center pt-2">
