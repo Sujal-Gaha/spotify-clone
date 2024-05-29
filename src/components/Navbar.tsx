@@ -3,7 +3,9 @@
 import DownloadIcon from "@/icons/Download";
 import LeftArrowIcon from "@/icons/LeftArrow";
 import RightArrowIcon from "@/icons/RightArrow";
+import usePrevNextPageStore from "@/store/PrevNextPageStore";
 import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -18,8 +20,12 @@ const Navbar = () => {
   return (
     <div className="py-4 px-6 h-16 w-full flex justify-between">
       <div className="flex gap-2 items-center">
-        <LeftArrowIcon />
-        <RightArrowIcon />
+        <Link href={""}>
+          <LeftArrowIcon />
+        </Link>
+        <Link href={""}>
+          <RightArrowIcon />
+        </Link>
         {path === "/search" && (
           <div className="relative text-lessFocusColour">
             <input
