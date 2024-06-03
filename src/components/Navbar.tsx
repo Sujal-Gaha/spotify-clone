@@ -3,7 +3,6 @@
 import DownloadIcon from "@/icons/Download";
 import LeftArrowIcon from "@/icons/LeftArrow";
 import RightArrowIcon from "@/icons/RightArrow";
-import useGenreCardNumberStore from "@/store/genreCardNumberStore";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -16,15 +15,17 @@ const Navbar = () => {
   const [isSearchFieldFocused, setIsSearchFieldFocused] =
     useState<Boolean>(false);
 
-  const { genreId, cardId } = useGenreCardNumberStore();
-
   return (
     <div
       className={clsx(
         "py-4 px-6 h-16 w-full flex justify-between rounded-t-xl",
-        path == `/genre/${genreId}/card/${cardId}`
-          ? "bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]"
-          : "bg-none"
+        path === "/" ||
+          path === "/search" ||
+          path === "/music" ||
+          path === "/podcasts" ||
+          path === "/playlist"
+          ? "bg-none"
+          : "bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]"
       )}
     >
       <div className="flex gap-2 items-center">

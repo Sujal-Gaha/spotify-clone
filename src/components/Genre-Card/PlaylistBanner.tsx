@@ -25,10 +25,11 @@ const PlaylistBanner = (props: { genreId: number; cardId: number }) => {
               {homePageAllContent[props.genreId].content[props.cardId].title}
             </h1>
           </div>
-          <span className="h-5 text-sm text-white font-medium">
-            The Neighbourhood, Chase Atlantic
-            <span className="text-sm text-lessFocusColour"> and </span>Sabrina
-            Carpenter
+          <span className="h-5 text-sm text-white font-medium truncate">
+            {
+              homePageAllContent[props.genreId].content[props.cardId]
+                .description
+            }
           </span>
           <p className="h-5 text-sm text-white font-medium">
             Ongaku . 50 songs,
