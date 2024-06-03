@@ -6,7 +6,7 @@ const HomePageContentChanger = () => {
   const path = usePathname();
 
   return (
-    <div className="w-full h-14 flex gap-2 text-white text-sm px-6 font-medium">
+    <div className="w-full h-14 flex gap-2 text-white text-sm px-6 font-medium pt-2">
       <Link
         className={clsx(
           "w-[40.84px] h-8 py-1 px-3 rounded-2xl flex justify-center items-center",

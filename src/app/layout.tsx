@@ -26,12 +26,23 @@ export default function RootLayout({
           <LeftSideBarContainer />
           <div
             className={clsx(
-              "h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center gap-2",
+              "h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center",
               isRightSideBarVisible ? "w-[1048px]" : "w-full"
             )}
           >
             <Navbar />
-            {path !== "/search" && <HomePageContentChanger />}
+            {(() => {
+              switch (path) {
+                case "/":
+                  return <HomePageContentChanger />;
+                case "/music":
+                  return <HomePageContentChanger />;
+                case "/podcasts":
+                  return <HomePageContentChanger />;
+                default:
+                  return null;
+              }
+            })()}
             {children}
           </div>
           {isRightSideBarVisible && <RightSideBarContainer />}

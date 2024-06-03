@@ -7,6 +7,7 @@ import { useState } from "react";
 import useHomePageAllContentStore from "@/store/homePageAllContentStore";
 import Footer from "./Footer";
 import PlaylistBar from "./PlaylistBar";
+import Link from "next/link";
 
 const All = () => {
   const { homePageAllContent, setHomePageAllContent } =
@@ -38,7 +39,7 @@ const All = () => {
   };
 
   return (
-    <div className="flex flex-col overflow-y-auto px-5 w-full">
+    <div className="flex flex-col overflow-y-auto px-5 w-full pt-2">
       <PlaylistBar />
       <div className="h-full w-full pt-0 pb-6 flex flex-col gap-8 ">
         {homePageAllContent.map((allContent) => {
@@ -66,9 +67,10 @@ const All = () => {
               <div className="h-[282px] flex">
                 {allContent.content.map((content) => {
                   return (
-                    <div
+                    <Link
                       className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
                       key={content._id}
+                      href={`/genre/${allContent.mainId}/card/${content._id}`}
                       onMouseLeave={() => {
                         setCardId(NaN);
                         handleMouseLeave();
@@ -101,7 +103,7 @@ const All = () => {
                           {content.description}
                         </p>
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
