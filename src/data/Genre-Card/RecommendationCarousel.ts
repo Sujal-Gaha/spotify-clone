@@ -28,7 +28,7 @@ const RecommendationsCarouselData: TRecommendationCarousel[] = [
   {
     id: 5,
     image: "/Genre-Card/recommendation/arianaGrande.png",
-    title: "This Is Ariana Grande",
+    title: "Ariana Grande",
     isHovering: false,
   },
 ];
