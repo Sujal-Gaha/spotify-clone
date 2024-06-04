@@ -4,7 +4,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 1,
     title: {
-      image: "/Genre-Card/theIdol.png",
+      image: "/Genre-Card/tracklist/theIdol.png",
       name: "One Of The Girls (with JENNIE, Lily Rose Depp)",
       artist: "The Weeknd",
       featuring: [
@@ -26,7 +26,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 2,
     title: {
-      image: "/Genre-Card/starboy.png",
+      image: "/Genre-Card/tracklist/starboy.png",
       name: "Starboy",
       artist: "The Weeknd",
       featuring: [
@@ -45,7 +45,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 3,
     title: {
-      image: "/Genre-Card/afterHours.png",
+      image: "/Genre-Card/tracklist/afterHours.png",
       name: "Blinding Lights",
       artist: "The Weeknd",
       featuring: [
@@ -64,7 +64,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 4,
     title: {
-      image: "/Genre-Card/popular.png",
+      image: "/Genre-Card/tracklist/popular.png",
       name: "Popular (with Playboi Carti & Madonna)",
       artist: "The Weeknd",
       featuring: [
@@ -86,7 +86,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 5,
     title: {
-      image: "/Genre-Card/starboy.png",
+      image: "/Genre-Card/tracklist/starboy.png",
       name: "Die For You",
       artist: "The Weeknd",
       featuring: [
@@ -105,7 +105,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 6,
     title: {
-      image: "/Genre-Card/starboy.png",
+      image: "/Genre-Card/tracklist/starboy.png",
       name: "Stargirl Interlude",
       artist: "The Weeknd",
       featuring: [
@@ -124,7 +124,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 7,
     title: {
-      image: "/Genre-Card/afterHours.png",
+      image: "/Genre-Card/tracklist/afterHours.png",
       name: "Save Your Tears",
       artist: "The Weeknd",
       featuring: [
@@ -143,7 +143,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 8,
     title: {
-      image: "/Genre-Card/heroes&Villains.png",
+      image: "/Genre-Card/tracklist/heroes&Villains.png",
       name: "Creppin'(with The Weeknd & 21 Savage)",
       artist: "Metro Boomin",
       featuring: [
@@ -165,7 +165,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 9,
     title: {
-      image: "/Genre-Card/beautyBehindTheMadness.png",
+      image: "/Genre-Card/tracklist/beautyBehindTheMadness.png",
       name: "The Hills",
       artist: "The Weeknd",
       featuring: [
@@ -184,7 +184,7 @@ const TrackListData: TTrackList[] = [
   {
     "#": 10,
     title: {
-      image: "/Genre-Card/myDearMelancholy.png",
+      image: "/Genre-Card/tracklist/myDearMelancholy.png",
       name: "Call Out My Name",
       artist: "The Weeknd",
       featuring: [
