@@ -1,4 +1,4 @@
-import TRecommendationCarousel from "@/type/Genre-Card/TRecommendationCarousel";
+import TRecommendationCarousel from "@/types/Genre-Card/TRecommendationCarousel";
 
 const RecommendationsCarouselData: TRecommendationCarousel[] = [
   {

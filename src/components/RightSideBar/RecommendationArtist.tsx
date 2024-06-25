@@ -1,6 +1,6 @@
 "use client";
 
-import useRightSideBarStore from "@/store/RightSideBarStore";
+import useRightSideBarStore from "@/stores/RightSideBarStore";
 import { BsThreeDots } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 

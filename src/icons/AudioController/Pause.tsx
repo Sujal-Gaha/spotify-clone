@@ -1,6 +1,6 @@
 "use client";
 
-import useSongStore from "@/store/songStore";
+import useSongStore from "@/stores/songStore";
 
 const PauseIcon = () => {
   const { setIsSongPlaying } = useSongStore();

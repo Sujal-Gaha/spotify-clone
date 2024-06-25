@@ -1,5 +1,5 @@
 import TrackListData from "@/data/Genre-Card/TrackList";
-import TTrackList from "@/type/Genre-Card/TTrackList";
+import TTrackList from "@/types/Genre-Card/TTrackList";
 import { create } from "zustand";
 
 type TTrackListState = {

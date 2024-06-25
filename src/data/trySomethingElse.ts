@@ -1,4 +1,4 @@
-import TTrySomethingElse from "@/type/TTrySomethingElse";
+import TTrySomethingElse from "@/types/TTrySomethingElse";
 
 const trySomethingElseContent: TTrySomethingElse[] = [
   {

@@ -1,4 +1,4 @@
-import THomePageAllContent from "@/type/THomePageAllContent";
+import THomePageAllContent from "@/types/THomePageAllContent";
 import recommendationContent from "./recommendations";
 import recentContent from "./recents";
 import throwbackContent from "./throwback";

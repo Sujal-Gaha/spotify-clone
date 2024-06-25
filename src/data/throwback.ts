@@ -1,4 +1,4 @@
-import TThrowback from "@/type/TThrowback";
+import TThrowback from "@/types/TThrowback";
 
 const throwbackContent: TThrowback[] = [
   {

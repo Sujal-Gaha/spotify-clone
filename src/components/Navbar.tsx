@@ -4,6 +4,7 @@ import DownloadIcon from "@/icons/Download";
 import LeftArrowIcon from "@/icons/LeftArrow";
 import RightArrowIcon from "@/icons/RightArrow";
 import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -51,9 +52,12 @@ const Navbar = () => {
       </div>
       <div className="flex gap-2">
         {path === "/" && (
-          <div className="text-black bg-white w-[142.98px] h-8 py-2 px-3 text-[13px] font-bold rounded-3xl flex items-center justify-center">
+          <Link
+            className="text-black bg-white w-[142.98px] h-8 py-2 px-3 text-[13px] font-bold rounded-3xl flex items-center justify-center hover:h-10 hover:w-[150px] hover:text-sm duration-200 ease-in-out"
+            href={"/premium"}
+          >
             <span>Explore Premium</span>
-          </div>
+          </Link>
         )}
         <div>
           <div className="py-1 px-2 h-8 w-[118.58px] bg-appBlack flex justify-center items-center rounded-3xl gap-[6px]">

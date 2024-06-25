@@ -1,4 +1,4 @@
-import TFeaturedCharts from "@/type/TFeaturedCharts";
+import TFeaturedCharts from "@/types/TFeaturedCharts";
 
 const featuredChartsContent: TFeaturedCharts[] = [
   {

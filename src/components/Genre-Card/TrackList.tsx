@@ -1,6 +1,6 @@
 "use client";
 
-import useTrackListStore from "@/store/Genre-Card/TrackListStore";
+import useTrackListStore from "@/stores/Genre-Card/TrackListStore";
 import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
 import { IoPlay, IoTimeOutline } from "react-icons/io5";

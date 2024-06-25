@@ -1,4 +1,4 @@
-import TMood from "@/type/TMood";
+import TMood from "@/types/TMood";
 
 const moodContent: TMood[] = [
   {

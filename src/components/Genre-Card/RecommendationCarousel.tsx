@@ -1,6 +1,6 @@
 "use client";
 
-import useRecommendationCarouselStore from "@/store/Genre-Card/RecommendationCarouselStore";
+import useRecommendationCarouselStore from "@/stores/Genre-Card/RecommendationCarouselStore";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";

@@ -1,4 +1,4 @@
-import TTrackList from "@/type/Genre-Card/TTrackList";
+import TTrackList from "@/types/Genre-Card/TTrackList";
 
 const TrackListData: TTrackList[] = [
   {

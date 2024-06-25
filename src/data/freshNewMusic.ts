@@ -1,4 +1,4 @@
-import TFreshNewMusic from "@/type/TFeaturedCharts";
+import TFreshNewMusic from "@/types/TFeaturedCharts";
 
 const freshNewMusicContent: TFreshNewMusic[] = [
   {

@@ -1,5 +1,5 @@
 import RecommendationsCarouselData from "@/data/Genre-Card/RecommendationCarousel";
-import TRecommendationCarousel from "@/type/Genre-Card/TRecommendationCarousel";
+import TRecommendationCarousel from "@/types/Genre-Card/TRecommendationCarousel";
 import { create } from "zustand";
 
 type TRecommendationCarouselDataState = {

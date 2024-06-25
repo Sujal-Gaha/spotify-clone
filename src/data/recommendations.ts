@@ -1,4 +1,4 @@
-import TRecommendation from "@/type/TRecommendation";
+import TRecommendation from "@/types/TRecommendation";
 
 const recommendationContent: TRecommendation[] = [
   {

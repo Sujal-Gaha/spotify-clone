@@ -1,4 +1,4 @@
-import TRecent from "@/type/TRecent";
+import TRecent from "@/types/TRecent";
 
 const recentContent: TRecent[] = [
   {

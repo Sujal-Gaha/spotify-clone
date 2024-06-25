@@ -1,4 +1,4 @@
-import usePlaylistBarContent from "@/store/playlistBarContentStore";
+import usePlaylistBarContent from "@/stores/playlistBarContentStore";
 import clsx from "clsx";
 import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";

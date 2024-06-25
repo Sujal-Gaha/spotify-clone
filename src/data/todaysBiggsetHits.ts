@@ -1,4 +1,4 @@
-import TTodaysBiggestHits from "@/type/TTodaysBiggestHits";
+import TTodaysBiggestHits from "@/types/TTodaysBiggestHits";
 
 const todaysBiggestHitsContent: TTodaysBiggestHits[] = [
   {
