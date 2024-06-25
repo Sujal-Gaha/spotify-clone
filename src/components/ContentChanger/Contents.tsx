@@ -6,7 +6,7 @@ interface ContentsProps {
   contentData: TContentData[];
 }
 
-const Contents: React.FC<ContentsProps> = ({ contentData }) => {
+const Contents = ({ contentData }: ContentsProps) => {
   return (
     <>
       {contentData.map((content) => (

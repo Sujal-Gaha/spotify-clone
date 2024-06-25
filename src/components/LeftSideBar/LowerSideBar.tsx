@@ -4,49 +4,17 @@ import DefaultLibraryIcon from "@/icons/DefaultLibrary";
 import { CiSearch } from "react-icons/ci";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { MdOutlineStorage } from "react-icons/md";
-import Image from "next/image";
 import { useState } from "react";
-import { PiMusicNotesPlus } from "react-icons/pi";
-import { FaRegFolder } from "react-icons/fa";
 import Link from "next/link";
+import PlayLists from "./PlayLists";
+import playListData from "@/constants/Playlist/playListData";
+import CreatePlaylistModal from "./CreatePlaylistModal";
 
 const LowerSideBar = () => {
-  const [count, setCount] = useState(2);
-
-  type TPlaylist = {
-    image: string;
-    title: string;
-  };
-
-  const [playlists, setPlaylists] = useState<TPlaylist[]>([
-    {
-      image: "/theIdol.png",
-      title: "The Weeknd",
-    },
-  ]);
+  const [playlists, setPlaylists] = useState(playListData);
 
   const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] =
     useState(false);
-
-  const handleCreateNewPlaylist = () => {
-    const newObject = {
-      image: "/theIdol.png",
-      title: `My Playlist #${count}`,
-    };
-    const updatedPlaylist = [newObject].concat(playlists);
-    console.log("Handle Create new playlist ", updatedPlaylist);
-    setPlaylists(updatedPlaylist);
-    setCount(count + 1);
-  };
-
-  const handleCreatePlaylistFolder = () => {
-    const newObject = {
-      image: "/theIdol.png",
-      title: "New Folder",
-    };
-    const updatedPlaylist = [newObject].concat(playlists);
-    setPlaylists(updatedPlaylist);
-  };
 
   return (
     <div className="bg-sectionColour rounded-lg flex flex-col h-full">
@@ -71,32 +39,11 @@ const LowerSideBar = () => {
                 }}
               />
               {isCreatePlaylistModalOpen && (
-                <div className="fixed h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col z-10">
-                  <div
-                    className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour hover:bg-activeSmallerSectionColour cursor-pointer"
-                    onClick={() => {
-                      setIsCreatePlaylistModalOpen(false);
-                      handleCreateNewPlaylist();
-                    }}
-                  >
-                    <PiMusicNotesPlus className="text-lg" />
-                    <div className="text-sm w-[148px]">
-                      Create a new playlist
-                    </div>
-                  </div>
-                  <div
-                    className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour hover:bg-activeSmallerSectionColour cursor-pointer"
-                    onClick={() => {
-                      setIsCreatePlaylistModalOpen(false);
-                      handleCreatePlaylistFolder();
-                    }}
-                  >
-                    <FaRegFolder className="text-lg" />
-                    <div className="text-sm w-[148px]">
-                      Create a playlist folder
-                    </div>
-                  </div>
-                </div>
+                <CreatePlaylistModal
+                  playlists={playlists}
+                  setPlaylists={setPlaylists}
+                  setIsCreatePlaylistModalOpen={setIsCreatePlaylistModalOpen}
+                />
               )}
             </div>
 
@@ -121,31 +68,7 @@ const LowerSideBar = () => {
             <MdOutlineStorage />
           </div>
         </div>
-        {playlists.map((playlist, index) => {
-          return (
-            <Link
-              href={"/playlist/1"}
-              className="h-16 w-[404px] flex justify-start p-2 gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-500 rounded"
-              key={index}
-            >
-              <div className="h-12 w-12">
-                <Image
-                  src={playlist.image}
-                  alt="album cover"
-                  width={50}
-                  height={50}
-                  className="rounded"
-                />
-              </div>
-              <div className="flex flex-col justify-center gap-1">
-                <p className="text-white text-sm">{playlist.title}</p>
-                <p className="text-lessFocusColour text-xs">
-                  Playlist . Sujal Gaha
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+        <PlayLists playlists={playlists} />
       </div>
     </div>
   );
