@@ -3,7 +3,7 @@ import FourthServiceIcon from "@/icons/Premium/FourthService";
 import SecondServiceIcon from "@/icons/Premium/SecondService";
 import ThirdServiceIcon from "@/icons/Premium/ThirdService";
 
-type TServices = {
+export type TServices = {
   icon: React.ReactNode;
   title: string;
   description: string;
