@@ -38,14 +38,14 @@ const AmexIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(319.578 51.4723) scale(2618.71 2618.71)"
         >
-          <stop stop-color="#9DD5F6" />
-          <stop offset="0.0711" stop-color="#98D3F5" />
-          <stop offset="0.1575" stop-color="#89CEF3" />
-          <stop offset="0.2516" stop-color="#70C6EF" />
-          <stop offset="0.3514" stop-color="#4EBBEA" />
-          <stop offset="0.4546" stop-color="#23ADE3" />
-          <stop offset="0.5" stop-color="#0DA6E0" />
-          <stop offset="1" stop-color="#2E77BC" />
+          <stop stopColor="#9DD5F6" />
+          <stop offset="0.0711" stopColor="#98D3F5" />
+          <stop offset="0.1575" stopColor="#89CEF3" />
+          <stop offset="0.2516" stopColor="#70C6EF" />
+          <stop offset="0.3514" stopColor="#4EBBEA" />
+          <stop offset="0.4546" stopColor="#23ADE3" />
+          <stop offset="0.5" stopColor="#0DA6E0" />
+          <stop offset="1" stopColor="#2E77BC" />
         </radialGradient>
         <clipPath id="clip0_174_412">
           <rect

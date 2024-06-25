@@ -13,7 +13,7 @@ const UpperSideBar = () => {
     <div className="h-28 bg-sectionColour px-3 py-2 rounded-lg">
       <div className="flex flex-col h-24 w-full items-center justify-center gap-2">
         <div className="w-[396px] flex justify-center">
-          <div className="flex h-10 w-[372px] items-center ">
+          <div className="flex h-10 w-[372px] items-center">
             <Link
               href={"/"}
               className={clsx(

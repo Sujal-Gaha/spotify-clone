@@ -46,7 +46,6 @@ const LowerSideBar = () => {
                 />
               )}
             </div>
-
             <div className="p-2">
               <FaArrowRight className="text-lessFocusColour cursor-pointer hover:text-white duration-500 ease-in-out" />
             </div>

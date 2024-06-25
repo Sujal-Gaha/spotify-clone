@@ -1,4 +1,4 @@
-type TPlan = {
+export type TPlan = {
   numberOfButtons: number;
   title: string;
   description: string;
