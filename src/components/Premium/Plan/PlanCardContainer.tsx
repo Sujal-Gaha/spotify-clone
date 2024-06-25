@@ -1,6 +1,5 @@
-import { TPlan } from "@/constants/Premium/Plan";
-import React from "react";
 import PlanCard from "./PlanCard";
+import { TPlan } from "@/types/TPlan";
 
 interface IPlanData {
   PlanData: TPlan[];

@@ -1,15 +1,4 @@
-export type TPlan = {
-  numberOfButtons: number;
-  title: string;
-  description: string;
-  numberOfAccountsFor: string;
-  facilities: TFacilities[];
-  termsAndConditions: string;
-};
-
-type TFacilities = {
-  facility: string;
-};
+import { TPlan } from "@/types/TPlan";
 
 const PlanData: TPlan[] = [
   {

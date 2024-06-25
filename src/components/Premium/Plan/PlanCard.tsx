@@ -1,6 +1,5 @@
-import { TPlan } from "@/constants/Premium/Plan";
 import TickIcon from "@/icons/Premium/Tick";
-import React from "react";
+import { TPlan } from "@/types/TPlan";
 
 interface IPlan {
   plan: TPlan;
