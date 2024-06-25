@@ -5,7 +5,7 @@ import "./globals.css";
 import LeftSideBarContainer from "@/components/LeftSideBar/LeftSideBarContainer";
 import RightSideBarContainer from "@/components/RightSideBar/RightSideBarContainer";
 import useRightSideBarStore from "@/stores/RightSideBarStore";
-import HomePageContentChanger from "@/components/HomePageContentChanger";
+import HomePageContentChanger from "@/components/ContentChanger/ContentChanger";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";

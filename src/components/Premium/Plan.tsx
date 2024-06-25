@@ -1,4 +1,4 @@
-import PlanData from "@/data/Premium/Plan";
+import PlanData from "@/constants/Premium/Plan";
 import AmexIcon from "@/icons/Premium/Amex";
 import DCIIcon from "@/icons/Premium/DCI";
 import MastercardIcon from "@/icons/Premium/Mastercard";

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import TPlaylistBar from "@/types/TPlaylistBar";
-import playlistBarContent from "@/data/playlistBar";
+import playlistBarContent from "@/constants/playlistBar";
 
 type TPlaylistBarContentState = {
   playlistBarContent: TPlaylistBar[];

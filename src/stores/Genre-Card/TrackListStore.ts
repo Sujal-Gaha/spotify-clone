@@ -1,4 +1,4 @@
-import TrackListData from "@/data/Genre-Card/TrackList";
+import TrackListData from "@/constants/Genre-Card/TrackList";
 import TTrackList from "@/types/Genre-Card/TTrackList";
 import { create } from "zustand";
 

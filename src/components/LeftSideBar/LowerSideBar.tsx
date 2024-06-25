@@ -45,7 +45,6 @@ const LowerSideBar = () => {
       title: "New Folder",
     };
     const updatedPlaylist = [newObject].concat(playlists);
-    console.log("Handle Create new playlist ", updatedPlaylist);
     setPlaylists(updatedPlaylist);
   };
 
@@ -72,7 +71,7 @@ const LowerSideBar = () => {
                 }}
               />
               {isCreatePlaylistModalOpen && (
-                <div className="absolute top-10 left-2 h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col z-10">
+                <div className="fixed h-[88px] w-[198.39px] p-1 shadow rounded bg-smallerSectionColour flex flex-col z-10">
                   <div
                     className="w-full h-10 py-3 px-1 flex justify-center items-center gap-2 text-lessFocusColour hover:bg-activeSmallerSectionColour cursor-pointer"
                     onClick={() => {

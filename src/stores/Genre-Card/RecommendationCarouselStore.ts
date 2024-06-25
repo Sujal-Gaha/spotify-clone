@@ -1,4 +1,4 @@
-import RecommendationsCarouselData from "@/data/Genre-Card/RecommendationCarousel";
+import RecommendationsCarouselData from "@/constants/Genre-Card/RecommendationCarousel";
 import TRecommendationCarousel from "@/types/Genre-Card/TRecommendationCarousel";
 import { create } from "zustand";
 

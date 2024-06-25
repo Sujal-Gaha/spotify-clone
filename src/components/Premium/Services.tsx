@@ -1,4 +1,4 @@
-import ServicesProvided from "@/data/Premium/Services";
+import ServicesProvided from "@/constants/Premium/Services";
 
 const Services = () => {
   return (
