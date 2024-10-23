@@ -1,12 +1,12 @@
 "use client";
 
 import PlanData from "@/constants/Premium/Plan";
-import AmexIcon from "@/components/icons/premium/Amex";
-import DCIIcon from "@/components/icons/premium/DCI";
-import MastercardIcon from "@/components/icons/premium/Mastercard";
-import PaytmIcon from "@/components/icons/premium/Paytm";
-import UpiIcon from "@/components/icons/premium/Upi";
-import VisaIcon from "@/components/icons/premium/Visa";
+import { AmexIcon } from "@/components/icons/premium/amex";
+import { DCIIcon } from "@/components/icons/premium/dci";
+import { MastercardIcon } from "@/components/icons/premium/mastercard";
+import { PaytmIcon } from "@/components/icons/premium/paytm";
+import { UpiIcon } from "@/components/icons/premium/upi";
+import { VisaIcon } from "@/components/icons/premium/visa";
 import React, { useState } from "react";
 import PlanCardContainer from "./PlanCardContainer";
 

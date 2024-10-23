@@ -1,4 +1,4 @@
-import LogoIcon from "@/components/icons/premium/logo";
+import { LogoIcon } from "@/components/icons/premium/logo";
 
 const Navbar = () => {
   return (

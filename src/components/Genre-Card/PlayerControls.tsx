@@ -1,6 +1,6 @@
-import ColouredPlayIcon from "@/components/icons/Genre-Card/ColouredPlay";
-import MoreOptionsIcon from "@/components/icons/Genre-Card/MoreOptions";
-import SaveIcon from "@/components/icons/Genre-Card/Save";
+import { ColouredPlayIcon } from "@/components/icons/coloured-play";
+import { MoreOptionsIcon } from "@/components/icons/more-options";
+import { SaveIcon } from "@/components/icons/save";
 import { MdOutlineStorage } from "react-icons/md";
 
 const PlayerControls = () => {

@@ -1,9 +1,9 @@
-import LogoIcon from "../icons/premium/logo";
+import { LogoIcon } from "../icons/premium/logo";
 import { footerData } from "@/constants/Premium/footer";
-import { EarthIcon } from "@/components/icons/premium/Earth";
-import { InstagramIcon } from "@/components/icons/premium/Instagram";
+import { EarthIcon } from "@/components/icons/premium/earth";
+import { InstagramIcon } from "@/components/icons/premium/instagram";
 import { TwitterIcon } from "@/components/icons/premium/twitter";
-import { FacebookIcon } from "@/components/icons/premium/Facebook";
+import { FacebookIcon } from "@/components/icons/premium/facebook";
 
 export const FooterPremium = () => {
   return (

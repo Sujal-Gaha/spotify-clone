@@ -1,4 +1,4 @@
-import TickIcon from "@/components/icons/premium/Tick";
+import { TickIcon } from "@/components/icons/premium/tick";
 import { TPlan } from "@/types/TPlan";
 
 interface IPlan {

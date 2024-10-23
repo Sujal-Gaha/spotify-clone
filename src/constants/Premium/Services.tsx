@@ -1,7 +1,7 @@
-import FirstServiceIcon from "@/components/icons/premium/FirstService";
-import FourthServiceIcon from "@/components/icons/premium/FourthService";
-import SecondServiceIcon from "@/components/icons/premium/SecondService";
-import ThirdServiceIcon from "@/components/icons/premium/ThirdService";
+import { FirstServiceIcon } from "@/components/icons/premium/first-service";
+import { FourthServiceIcon } from "@/components/icons/premium/fourth-service";
+import { SecondServiceIcon } from "@/components/icons/premium/second-service";
+import { ThirdServiceIcon } from "@/components/icons/premium/third-service";
 
 export type TServices = {
   icon: React.ReactNode;
