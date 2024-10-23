@@ -8,6 +8,7 @@ import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { FiSearch } from "react-icons/fi";
 import { GoBell } from "react-icons/go";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const path = usePathname();
@@ -64,12 +65,14 @@ const Navbar = () => {
       </div>
       <div className="flex gap-2">
         {path === "/" && (
-          <Link
-            className="text-black bg-white w-[142.98px] h-8 py-2 px-3 text-[13px] font-bold rounded-3xl flex items-center justify-center hover:h-10 hover:w-[150px] hover:text-sm duration-200 ease-in-out"
-            href={"/premium"}
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            className="bg-white w-[142.98px] h-8 py-2 px-3 text-[13px] rounded-3xl flex items-center justify-center cursor-pointer"
           >
-            <span>Explore Premium</span>
-          </Link>
+            <Link href={"/premium"}>
+              <span className="text-black font-bold">Explore Premium</span>
+            </Link>
+          </motion.div>
         )}
         <div>
           <div className="py-1 px-2 h-8 w-[118.58px] bg-appBlack flex justify-center items-center rounded-3xl gap-[6px]">

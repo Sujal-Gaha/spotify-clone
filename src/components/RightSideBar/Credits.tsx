@@ -1,3 +1,5 @@
+import { FollowButton } from "./RightSideBarContainer";
+
 const Credits = () => {
   return (
     <div className="bg-smallerSectionColour w-[388px] h-[249px] p-4 rounded-xl flex flex-col justify-center gap-4">
@@ -16,11 +18,7 @@ const Credits = () => {
           <p className="text-white font-medium">The Weeknd</p>
           <p className="text-lessFocusColour text-sm">Main artist, Producer</p>
         </div>
-        <div>
-          <button className="rounded-xl border text-white text-sm py-[3px] px-[15px] hover:py-1 hover:px-4 hover:text-[15px] duration-150 ease-in-out">
-            Follow
-          </button>
-        </div>
+        <FollowButton />
       </div>
       <div className="w-full h-11 flex flex-col">
         <p className="text-white font-medium">Max Martin</p>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FollowButton } from "./RightSideBarContainer";
 
 const ArtistCard = () => {
   return (
@@ -22,11 +23,7 @@ const ArtistCard = () => {
               110,915,289 monthly listeners
             </p>
           </div>
-          <div>
-            <button className="text-white text-sm border py-[3px] px-[15px] rounded-xl hover:py-1 hover:px-4 hover:text-[15px] duration-150 ease-in-out">
-              Follow
-            </button>
-          </div>
+          <FollowButton />
         </div>
         <div>
           <p className="text-sm text-lessFocusColour">

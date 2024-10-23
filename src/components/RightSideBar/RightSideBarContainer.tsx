@@ -4,6 +4,18 @@ import Credits from "./Credits";
 import ArtistCard from "./ArtistCard";
 import RecommendationCard from "./RecommendationCard";
 import RecommendationArtist from "./RecommendationArtist";
+import { motion } from "framer-motion";
+
+export const FollowButton = () => {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="text-white text-sm border py-[3px] px-[15px] rounded-xl cursor-pointer"
+    >
+      Follow
+    </motion.div>
+  );
+};
 
 const RightSideBarContainer = () => {
   return (
