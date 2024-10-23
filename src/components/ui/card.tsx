@@ -4,7 +4,8 @@ import { TContent } from "@/types/THomePageAllContent";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaCirclePlay } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { FaPlay } from "react-icons/fa";
 
 export const Card = ({
   href,
@@ -31,7 +32,12 @@ export const Card = ({
           className="rounded-lg"
         />
         {isHovering ? (
-          <FaCirclePlay className="absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full hover:text-[56px] hover:bottom-1 hover:right-1 z-10 ease-in delay-75" />
+          <motion.div
+            className="absolute bg-mainColour right-2 bottom-2 rounded-full p-3 text-2xl"
+            whileHover={{ scale: 1.2 }}
+          >
+            <FaPlay className="ml-1" />
+          </motion.div>
         ) : null}
       </div>
       <div className="flex flex-col gap-2">
