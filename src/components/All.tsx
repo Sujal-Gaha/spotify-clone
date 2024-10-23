@@ -1,13 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { FaCirclePlay } from "react-icons/fa6";
-import clsx from "clsx";
 import { useState } from "react";
 import useHomePageAllContentStore from "@/stores/homePageAllContentStore";
 import Footer from "./Footer";
 import PlaylistBar from "./PlaylistBar";
-import Link from "next/link";
+import { Card } from "./ui/card";
 
 const All = () => {
   const { homePageAllContent, setHomePageAllContent } =
@@ -39,7 +36,7 @@ const All = () => {
   };
 
   return (
-    <div className="flex flex-col overflow-y-auto px-5 w-full pt-2">
+    <div className="flex flex-col overflow-y-auto px-5 w-full pt-2 no-scrollbar">
       <PlaylistBar />
       <div className="h-full w-full pt-0 pb-6 flex flex-col gap-8 ">
         {homePageAllContent.map((allContent) => {
@@ -67,43 +64,11 @@ const All = () => {
               <div className="h-[282px] flex">
                 {allContent.content.map((content) => {
                   return (
-                    <Link
-                      className="w-[204.81px] h-full p-2 rounded-lg flex flex-col gap-1 cursor-pointer hover:bg-smallerSectionColour hover:shadow-lg ease-in-out duration-300"
+                    <Card
                       key={content._id}
+                      content={content}
                       href={`/genre/${allContent.mainId}/card/${content._id}`}
-                      onMouseLeave={() => {
-                        setCardId(NaN);
-                        handleMouseLeave();
-                      }}
-                      onMouseOver={() => {
-                        setCardId(content._id);
-                        handleMouseOver();
-                      }}
-                    >
-                      <div className="relative">
-                        <Image
-                          alt="album"
-                          src={content.image}
-                          height={205}
-                          width={205}
-                          className="rounded-lg"
-                        />
-                        <FaCirclePlay
-                          className={clsx(
-                            "absolute text-mainColour text-5xl right-2 bottom-2 bg-black rounded-full hover:text-[56px] hover:bottom-1 hover:right-1 z-10",
-                            content.isHovering ? "block duration-200" : "hidden"
-                          )}
-                        />
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <p className="text-white font-semibold">
-                          {content.title}
-                        </p>
-                        <p className="text-lessFocusColour text-sm font-medium">
-                          {content.description}
-                        </p>
-                      </div>
-                    </Link>
+                    />
                   );
                 })}
               </div>
