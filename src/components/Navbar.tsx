@@ -1,8 +1,8 @@
 "use client";
 
-import DownloadIcon from "@/icons/Download";
-import LeftArrowIcon from "@/icons/LeftArrow";
-import RightArrowIcon from "@/icons/RightArrow";
+import DownloadIcon from "@/components/icons/Download";
+import LeftArrowIcon from "@/components/icons/LeftArrow";
+import RightArrowIcon from "@/components/icons/RightArrow";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

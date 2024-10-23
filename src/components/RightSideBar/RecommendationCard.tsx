@@ -1,4 +1,4 @@
-import AddedIcon from "@/icons/AudioController/Added";
+import AddedIcon from "@/components/icons/AudioController/Added";
 import Image from "next/image";
 
 const RecommendationCard = () => {

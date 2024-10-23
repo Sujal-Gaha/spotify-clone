@@ -1,6 +1,6 @@
 "use client";
 
-import DefaultLibraryIcon from "@/icons/DefaultLibrary";
+import DefaultLibraryIcon from "@/components/icons/DefaultLibrary";
 import { CiSearch } from "react-icons/ci";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { MdOutlineStorage } from "react-icons/md";
