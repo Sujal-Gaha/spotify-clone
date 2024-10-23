@@ -1,6 +1,6 @@
 "use client";
 
-import DefaultLibraryIcon from "@/components/icons/DefaultLibrary";
+import { LibraryIcon } from "@/components/icons/library";
 import { CiSearch } from "react-icons/ci";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { MdOutlineStorage } from "react-icons/md";
@@ -24,7 +24,7 @@ const LowerSideBar = () => {
             href={"/playlist"}
             className="flex items-center w-[142px] gap-4 justify-center"
           >
-            <DefaultLibraryIcon />
+            <LibraryIcon />
             <p className="text-white font-medium">Your Library</p>
           </Link>
           <div className="flex items-center justify-center gap-1">
