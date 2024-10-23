@@ -1,4 +1,4 @@
-import TSearchGenre from "@/types/TSearchGenre";
+import { TSearchGenre } from "@/types/TSearchGenre";
 
 const searchGenres: TSearchGenre[] = [
   {

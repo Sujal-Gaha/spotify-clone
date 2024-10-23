@@ -1,4 +1,4 @@
-import TPlaylistBar from "@/types/TPlaylistBar";
+import { TPlaylistBar } from "@/types/TPlaylistBar";
 
 const playlistBarContent: TPlaylistBar[] = [
   {

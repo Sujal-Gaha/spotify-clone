@@ -1,8 +1,8 @@
-type TFacilities = {
+export type TFacilities = {
   facility: string;
 };
 
-type TPlan = {
+export type TPlan = {
   numberOfButtons: number;
   title: string;
   description: string;
@@ -10,5 +10,3 @@ type TPlan = {
   facilities: TFacilities[];
   termsAndConditions: string;
 };
-
-export type { TPlan };

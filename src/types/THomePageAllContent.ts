@@ -1,4 +1,4 @@
-type TContent = {
+export type TContent = {
   _id: number;
   image: string;
   title: string;
@@ -6,10 +6,8 @@ type TContent = {
   isHovering: boolean;
 };
 
-type THomePageAllContent = {
+export type THomePageAllContent = {
   mainId: number;
   mainTitle: string;
   content: TContent[];
 };
-
-export default THomePageAllContent;

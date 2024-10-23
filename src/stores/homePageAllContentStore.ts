@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import THomePageAllContent from "@/types/THomePageAllContent";
+import { THomePageAllContent } from "@/types/THomePageAllContent";
 import homePageAllContentData from "@/constants/homePageAllContentData";
 
 type THomePageAllContentStore = {
