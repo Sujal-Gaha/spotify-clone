@@ -1,6 +1,6 @@
 "use client";
 
-import useHomePageAllContentStore from "@/store/homePageAllContentStore";
+import useHomePageAllContentStore from "@/stores/homePageAllContentStore";
 import Image from "next/image";
 
 const PlaylistBanner = (props: { genreId: number; cardId: number }) => {

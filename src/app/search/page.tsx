@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import searchGenres from "@/data/searchGenre";
+import searchGenres from "@/constants/searchGenre";
 
 const SearchPage = () => {
   return (

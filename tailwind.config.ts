@@ -22,6 +22,8 @@ const config: Config = {
         appBlack: "#0F0F0F",
         profileContainerColour: "#509BF5",
         playlistBarColour: "#2A2A2A",
+        signInAndLogInTextColour: "#D9DADC",
+        premiumBannerColour: "#1D75DE",
       },
     },
   },

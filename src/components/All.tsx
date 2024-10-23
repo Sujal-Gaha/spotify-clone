@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaCirclePlay } from "react-icons/fa6";
 import clsx from "clsx";
 import { useState } from "react";
-import useHomePageAllContentStore from "@/store/homePageAllContentStore";
+import useHomePageAllContentStore from "@/stores/homePageAllContentStore";
 import Footer from "./Footer";
 import PlaylistBar from "./PlaylistBar";
 import Link from "next/link";

@@ -13,7 +13,7 @@ const CardPage = ({
   };
 }) => {
   return (
-    <div className="overflow-y-auto">
+    <div className="overflow-y-auto no-scrollbar">
       <PlaylistBanner genreId={params.genreId} cardId={params.cardId} />
       <PlayerControls />
       <TrackList />
