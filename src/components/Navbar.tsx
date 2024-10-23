@@ -1,17 +1,21 @@
 "use client";
 
 import { DownloadIcon } from "@/components/icons/download";
-import { LeftArrowIcon } from "@/components/icons/left-arrow";
-import { RightArrowIcon } from "@/components/icons/right-arrow";
 import clsx from "clsx";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { FiSearch } from "react-icons/fi";
 import { GoBell } from "react-icons/go";
 
 const Navbar = () => {
   const path = usePathname();
+
+  const router = useRouter();
+
+  const handleLeftArrowClicked = () => router.back();
+  const handleRightArrowClicked = () => router.forward();
 
   const [isSearchFieldFocused, setIsSearchFieldFocused] =
     useState<Boolean>(false);
@@ -30,8 +34,16 @@ const Navbar = () => {
       )}
     >
       <div className="flex gap-2 items-center">
-        <LeftArrowIcon />
-        <RightArrowIcon />
+        <div onClick={handleLeftArrowClicked}>
+          <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
+            <FaChevronLeft />
+          </div>
+        </div>
+        <div onClick={handleRightArrowClicked}>
+          <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
+            <FaChevronRight />
+          </div>
+        </div>
         {path === "/search" && (
           <div className="relative text-lessFocusColour">
             <input
