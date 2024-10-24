@@ -1,19 +1,13 @@
 "use client";
 
-import { TContent } from "@/types/THomePageAllContent";
+import { TCard } from "@/types/";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
 
-export const Card = ({
-  href,
-  content,
-}: {
-  href: string;
-  content: TContent;
-}) => {
+export const Card = ({ href, card }: { href: string; card: TCard }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -26,7 +20,7 @@ export const Card = ({
       <div className="relative">
         <Image
           alt="album"
-          src={content.image}
+          src={card.image}
           height={205}
           width={205}
           className="rounded-lg"
@@ -41,9 +35,9 @@ export const Card = ({
         ) : null}
       </div>
       <div className="flex flex-col gap-2">
-        <p className="text-white font-semibold">{content.title}</p>
+        <p className="text-white font-semibold">{card.title}</p>
         <p className="text-lessFocusColour text-sm font-medium">
-          {content.description}
+          {card.description}
         </p>
       </div>
     </Link>

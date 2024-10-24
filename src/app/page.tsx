@@ -8,7 +8,5 @@ import Podcasts from "./podcasts/page";
 export default function Home() {
   const path = usePathname();
 
-  return (
-    <>{path === "/" ? <All /> : path === "/music" ? <Music /> : <Podcasts />}</>
-  );
+  return path === "/" ? <All /> : path === "/music" ? <Music /> : <Podcasts />;
 }

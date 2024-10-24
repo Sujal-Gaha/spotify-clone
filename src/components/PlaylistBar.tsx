@@ -1,12 +1,10 @@
-import usePlaylistBarContent from "@/stores/playlistBarContentStore";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlay } from "react-icons/fa";
+import { playlistBarContent } from "@/constants";
 
 const PlaylistBar = () => {
-  const { playlistBarContent } = usePlaylistBarContent();
-
   const [isHovering, setIsHovering] = useState(false);
 
   return (

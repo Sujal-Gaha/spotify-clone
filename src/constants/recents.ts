@@ -1,13 +1,10 @@
-import { TRecent } from "@/types/TRecent";
+import { TCard } from "@/types/index";
 
-const recentContent: TRecent[] = [
+export const recentContent: TCard[] = [
   {
     _id: 0,
     image: "/recent/theWeekndMix.png",
     title: "The Weeknd Mix",
     description: "Chris Brown, Miguel and Chase Atlantic",
-    isHovering: false,
   },
 ];
-
-export default recentContent;

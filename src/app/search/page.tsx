@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import searchGenres from "@/constants/searchGenre";
+import { searchGenres } from "@/constants";
 
 const SearchPage = () => {
   return (
@@ -12,8 +12,8 @@ const SearchPage = () => {
           {searchGenres.map((genre, index) => {
             return (
               <div
-                className="h-[130.5px] w-[232px] rounded-xl overflow-hidden relative cursor-pointer"
                 key={index}
+                className="h-[130.5px] w-[232px] rounded-xl overflow-hidden relative cursor-pointer"
                 style={{
                   backgroundColor: `${genre.colour}`,
                 }}

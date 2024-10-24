@@ -1,20 +1,18 @@
 "use client";
 
-import useHomePageAllContentStore from "@/stores/homePageAllContentStore";
 import Footer from "./Footer";
 import PlaylistBar from "./PlaylistBar";
 import { Card } from "./ui/card";
+import { homeAllContent } from "@/constants";
 
 const All = () => {
-  const { homePageAllContent } = useHomePageAllContentStore();
-
   return (
     <div className="flex flex-col overflow-y-auto px-5 w-full pt-2 no-scrollbar">
       <PlaylistBar />
       <div className="h-full w-full pt-0 pb-6 flex flex-col gap-8 ">
-        {homePageAllContent.map((allContent) => {
+        {homeAllContent.map((allContent) => {
           return (
-            <div key={allContent.mainId} className="flex flex-col gap-2">
+            <div key={allContent.id} className="flex flex-col gap-2">
               <div className="w-full flex justify-between items-center px-2">
                 <p className="text-2xl text-white font-semibold">
                   {allContent.mainTitle}
@@ -24,12 +22,12 @@ const All = () => {
                 </p>
               </div>
               <div className="h-[282px] flex">
-                {allContent.content.map((content) => {
+                {allContent.content.map((cardContent) => {
                   return (
                     <Card
-                      key={content._id}
-                      content={content}
-                      href={`/genre/${allContent.mainId}/card/${content._id}`}
+                      key={cardContent._id}
+                      card={cardContent}
+                      href={`/genre/${allContent.id}/card/${cardContent._id}`}
                     />
                   );
                 })}

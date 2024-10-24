@@ -1,6 +1,6 @@
 import { TSearchGenre } from "@/types/TSearchGenre";
 
-const searchGenres: TSearchGenre[] = [
+export const searchGenres: TSearchGenre[] = [
   {
     title: "Music",
     colour: "#DC148C",
@@ -142,5 +142,3 @@ const searchGenres: TSearchGenre[] = [
     image: "",
   },
 ];
-
-export default searchGenres;

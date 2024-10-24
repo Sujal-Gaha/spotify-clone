@@ -15,7 +15,7 @@ import { PreviousSongIcon } from "@/components/icons/AudioController/previous-so
 import { QueueIcon } from "@/components/icons/AudioController/queue";
 import { ShufflePlaylistIcon } from "@/components/icons/AudioController/shuffle-playlist";
 import { TimePlayedIcon } from "@/components/icons/AudioController/time-played";
-import useSongStore from "@/stores/songStore";
+import useSongStore from "@/stores/useSongStore";
 import { Slider } from "antd";
 import Image from "next/image";
 

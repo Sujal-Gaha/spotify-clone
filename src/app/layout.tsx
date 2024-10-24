@@ -4,7 +4,7 @@ import AudioControllerContainer from "@/components/AudioControllerContainer";
 import "./globals.css";
 import LeftSideBarContainer from "@/components/LeftSideBar/LeftSideBarContainer";
 import RightSideBarContainer from "@/components/RightSideBar/RightSideBarContainer";
-import useRightSideBarStore from "@/stores/RightSideBarStore";
+import useRightSideBarStore from "@/stores/useRightSideBarStore";
 import HomePageContentChanger from "@/components/ContentChanger/ContentChanger";
 import clsx from "clsx";
 import Navbar from "@/components/Navbar";
