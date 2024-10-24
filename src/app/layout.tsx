@@ -7,8 +7,8 @@ import RightSideBarContainer from "@/components/RightSideBar/RightSideBarContain
 import useRightSideBarStore from "@/stores/useRightSideBarStore";
 import HomePageContentChanger from "@/components/ContentChanger/ContentChanger";
 import clsx from "clsx";
-import Navbar from "@/components/Navbar";
-import { usePathname } from "next/navigation";
+import { Navbar } from "@/components/Navbar";
+import { usePathState } from "@/utils/usePathState";
 
 export default function RootLayout({
   children,
@@ -17,17 +17,20 @@ export default function RootLayout({
 }>) {
   const { isRightSideBarVisible } = useRightSideBarStore();
 
-  const path = usePathname();
+  const { isPathPremium, isPathHome, isPathMusic, isPathPodcasts } =
+    usePathState();
+
+  const isContentTabsVisible = isPathHome || isPathMusic || isPathPodcasts;
 
   return (
     <html lang="en">
       <body
         className={clsx(
           "h-screen flex flex-col",
-          path === "/premium" ? "bg-white" : "bg-black p-2 gap-2"
+          isPathPremium ? "bg-white" : "bg-black p-2 gap-2"
         )}
       >
-        {path === "/premium" ? (
+        {isPathPremium ? (
           <>{children}</>
         ) : (
           <>
@@ -40,18 +43,7 @@ export default function RootLayout({
                 )}
               >
                 <Navbar />
-                {(() => {
-                  switch (path) {
-                    case "/":
-                      return <HomePageContentChanger />;
-                    case "/music":
-                      return <HomePageContentChanger />;
-                    case "/podcasts":
-                      return <HomePageContentChanger />;
-                    default:
-                      return null;
-                  }
-                })()}
+                {isContentTabsVisible ? <HomePageContentChanger /> : null}
                 {children}
               </div>
               {isRightSideBarVisible && <RightSideBarContainer />}

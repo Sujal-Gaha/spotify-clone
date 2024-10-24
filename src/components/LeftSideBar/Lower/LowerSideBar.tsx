@@ -10,7 +10,7 @@ import PlayLists from "./PlayLists";
 import playListData from "@/constants/Playlist/playListData";
 import CreatePlaylistModal from "./CreatePlaylistModal";
 
-const LowerSideBar = () => {
+export const LowerSideBar = () => {
   const [playlists, setPlaylists] = useState(playListData);
 
   const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] =
@@ -72,5 +72,3 @@ const LowerSideBar = () => {
     </div>
   );
 };
-
-export default LowerSideBar;

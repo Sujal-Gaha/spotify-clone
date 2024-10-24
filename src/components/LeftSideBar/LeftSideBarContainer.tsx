@@ -1,5 +1,5 @@
-import LowerSideBar from "./Lower/LowerSideBar";
-import UpperSideBar from "./Upper/UpperSideBar";
+import { LowerSideBar } from "./Lower/LowerSideBar";
+import { UpperSideBar } from "./Upper/UpperSideBar";
 
 const LeftSideBarContainer = () => {
   return (

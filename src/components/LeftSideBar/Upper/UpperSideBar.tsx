@@ -1,13 +1,16 @@
 "use client";
 
+import { usePathState } from "@/utils/usePathState";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiSearch } from "react-icons/fi";
 import { GoHome, GoHomeFill } from "react-icons/go";
 
-const UpperSideBar = () => {
+export const UpperSideBar = () => {
   const path = usePathname();
+
+  const { isPathHome, isPathSearch } = usePathState();
 
   return (
     <div className="h-28 bg-sectionColour px-3 py-2 rounded-lg">
@@ -18,10 +21,10 @@ const UpperSideBar = () => {
               href={"/"}
               className={clsx(
                 "flex items-center gap-5 hover:text-white ease-in-out duration-500",
-                path === "/" ? "text-white" : "text-lessFocusColour"
+                isPathHome ? "text-white" : "text-lessFocusColour"
               )}
             >
-              {path === "/" ? (
+              {isPathHome ? (
                 <GoHomeFill className="text-[28px]" />
               ) : (
                 <GoHome className="text-[28px]" />
@@ -36,7 +39,7 @@ const UpperSideBar = () => {
               href={"/search"}
               className={clsx(
                 "flex items-center gap-5 hover:text-white ease-in-out duration-500",
-                path === "/search" ? "text-white" : "text-lessFocusColour"
+                isPathSearch ? "text-white" : "text-lessFocusColour"
               )}
             >
               <FiSearch className="text-[27px]" />
@@ -48,5 +51,3 @@ const UpperSideBar = () => {
     </div>
   );
 };
-
-export default UpperSideBar;

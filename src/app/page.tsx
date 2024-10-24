@@ -1,12 +1,12 @@
 "use client";
 
-import All from "@/components/All";
-import { usePathname } from "next/navigation";
+import { All } from "@/components/All";
 import Music from "./music/page";
 import Podcasts from "./podcasts/page";
+import { usePathState } from "@/utils/usePathState";
 
 export default function Home() {
-  const path = usePathname();
+  const { isPathHome, isPathMusic } = usePathState();
 
-  return path === "/" ? <All /> : path === "/music" ? <Music /> : <Podcasts />;
+  return isPathHome ? <All /> : isPathMusic ? <Music /> : <Podcasts />;
 }

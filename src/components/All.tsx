@@ -5,7 +5,7 @@ import PlaylistBar from "./PlaylistBar";
 import { Card } from "./ui/card";
 import { homeAllContent } from "@/constants";
 
-const All = () => {
+export const All = () => {
   return (
     <div className="flex flex-col overflow-y-auto px-5 w-full pt-2 no-scrollbar">
       <PlaylistBar />
@@ -40,5 +40,3 @@ const All = () => {
     </div>
   );
 };
-
-export default All;
