@@ -7,7 +7,7 @@ import { IoPlay, IoTimeOutline } from "react-icons/io5";
 import { TrackListData } from "@/constants/Genre-Card/TrackList";
 import { TTrackList } from "@/types/Genre-Card/TTrackList";
 
-const TrackBar = ({ track }: { track: TTrackList }) => {
+export const TrackBar = ({ track }: { track: TTrackList }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -41,14 +41,14 @@ const TrackBar = ({ track }: { track: TTrackList }) => {
                 {track.title.artist}
               </span>
               {track.title.featuring.map((feature, index) => {
-                if (track.title.featuring[index].name.length > 0) {
+                if (track.title.featuring[index].length > 0) {
                   return (
                     <span
                       key={index}
                       className="hover:underline cursor-pointer"
                     >
                       <span className="!text-lessFocusColour">, </span>
-                      {feature.name}
+                      {feature}
                     </span>
                   );
                 }

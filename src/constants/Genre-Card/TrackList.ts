@@ -7,14 +7,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/theIdol.png",
       name: "One Of The Girls (with JENNIE, Lily Rose Depp)",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "JENNIE",
-        },
-        {
-          name: "Lily-Rose Depp",
-        },
-      ],
+      featuring: ["JENNIE", "Lily-Rose Depp"],
     },
     album: {
       name: "The Idols Episode 4 (Music from the series of The Idols)",
@@ -28,11 +21,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Starboy",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "Daft Punk",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "Starboy",
@@ -46,11 +35,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/afterHours.png",
       name: "Blinding Lights",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "After Hours",
@@ -64,14 +49,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/popular.png",
       name: "Popular (with Playboi Carti & Madonna)",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "Playboi Carti",
-        },
-        {
-          name: "Madonna",
-        },
-      ],
+      featuring: ["Playboi Carti", "Madonna"],
     },
     album: {
       name: "Popular(Music from the HBO Original series)",
@@ -85,11 +63,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Die For You",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "Starboy",
@@ -103,11 +77,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Stargirl Interlude",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "Lana Del Rey",
-        },
-      ],
+      featuring: ["Lana Del Rey"],
     },
     album: {
       name: "Starboy",
@@ -121,11 +91,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/afterHours.png",
       name: "Save Your Tears",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "After Hours",
@@ -139,14 +105,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/heroes&Villains.png",
       name: "Creppin'(with The Weeknd & 21 Savage)",
       artist: "Metro Boomin",
-      featuring: [
-        {
-          name: "The Weeknd",
-        },
-        {
-          name: "21 Savage",
-        },
-      ],
+      featuring: ["The Weeknd", "21 Savage"],
     },
     album: {
       name: "HEROES & VILLAINS",
@@ -160,11 +119,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/beautyBehindTheMadness.png",
       name: "The Hills",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "Beauty Behind The Madness",
@@ -178,11 +133,7 @@ export const TrackListData: TTrackList[] = [
       image: "/Genre-Card/tracklist/myDearMelancholy.png",
       name: "Call Out My Name",
       artist: "The Weeknd",
-      featuring: [
-        {
-          name: "",
-        },
-      ],
+      featuring: [],
     },
     album: {
       name: "My Dear Melancholy,",

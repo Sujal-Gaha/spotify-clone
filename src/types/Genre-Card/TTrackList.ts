@@ -4,15 +4,11 @@ export type TTrackList = {
     image: string;
     name: string;
     artist: string;
-    featuring: Tfeaturing[];
+    featuring: string[];
   };
   album: {
     name: string;
   };
   dateAdded: string;
   duration: string;
-};
-
-export type Tfeaturing = {
-  name: string;
 };
