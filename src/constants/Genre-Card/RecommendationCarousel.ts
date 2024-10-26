@@ -1,36 +1,34 @@
-import TRecommendationCarousel from "@/types/Genre-Card/TRecommendationCarousel";
+import { TCard } from "@/types";
 
-const RecommendationsCarouselData: TRecommendationCarousel[] = [
+export const RecommendationsCarouselData: TCard[] = [
   {
-    id: 1,
+    _id: 1,
     image: "/Genre-Card/recommendation/theWeeknd.png",
     title: "This Is The Weeknd",
-    isHovering: false,
+    description: "By Spotify",
   },
   {
-    id: 2,
+    _id: 2,
     image: "/Genre-Card/recommendation/theNeighbourhood.png",
     title: "The Neighbourhood",
-    isHovering: false,
+    description: "By Spotify",
   },
   {
-    id: 3,
+    _id: 3,
     image: "/Genre-Card/recommendation/beachWeather.png",
     title: "Beach Weather",
-    isHovering: false,
+    description: "By Spotify",
   },
   {
-    id: 4,
+    _id: 4,
     image: "/Genre-Card/recommendation/chaseAtlantic.png",
     title: "Chase Atlantic",
-    isHovering: false,
+    description: "By Spotify",
   },
   {
-    id: 5,
+    _id: 5,
     image: "/Genre-Card/recommendation/arianaGrande.png",
     title: "Ariana Grande",
-    isHovering: false,
+    description: "By Spotify",
   },
 ];
-
-export default RecommendationsCarouselData;
