@@ -1,8 +1,8 @@
-import TTrackList from "@/types/Genre-Card/TTrackList";
+import { TTrackList } from "@/types/Genre-Card/TTrackList";
 
-const TrackListData: TTrackList[] = [
+export const TrackListData: TTrackList[] = [
   {
-    "#": 1,
+    id: 1,
     title: {
       image: "/Genre-Card/tracklist/theIdol.png",
       name: "One Of The Girls (with JENNIE, Lily Rose Depp)",
@@ -21,10 +21,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "4:05",
-    isHovering: false,
   },
   {
-    "#": 2,
+    id: 2,
     title: {
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Starboy",
@@ -40,10 +39,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:50",
-    isHovering: false,
   },
   {
-    "#": 3,
+    id: 3,
     title: {
       image: "/Genre-Card/tracklist/afterHours.png",
       name: "Blinding Lights",
@@ -59,10 +57,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:20",
-    isHovering: false,
   },
   {
-    "#": 4,
+    id: 4,
     title: {
       image: "/Genre-Card/tracklist/popular.png",
       name: "Popular (with Playboi Carti & Madonna)",
@@ -81,10 +78,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:35",
-    isHovering: false,
   },
   {
-    "#": 5,
+    id: 5,
     title: {
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Die For You",
@@ -100,10 +96,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "4:20",
-    isHovering: false,
   },
   {
-    "#": 6,
+    id: 6,
     title: {
       image: "/Genre-Card/tracklist/starboy.png",
       name: "Stargirl Interlude",
@@ -119,10 +114,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "1:51",
-    isHovering: false,
   },
   {
-    "#": 7,
+    id: 7,
     title: {
       image: "/Genre-Card/tracklist/afterHours.png",
       name: "Save Your Tears",
@@ -138,10 +132,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:35",
-    isHovering: false,
   },
   {
-    "#": 8,
+    id: 8,
     title: {
       image: "/Genre-Card/tracklist/heroes&Villains.png",
       name: "Creppin'(with The Weeknd & 21 Savage)",
@@ -160,10 +153,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:41",
-    isHovering: false,
   },
   {
-    "#": 9,
+    id: 9,
     title: {
       image: "/Genre-Card/tracklist/beautyBehindTheMadness.png",
       name: "The Hills",
@@ -179,10 +171,9 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "4:02",
-    isHovering: false,
   },
   {
-    "#": 10,
+    id: 10,
     title: {
       image: "/Genre-Card/tracklist/myDearMelancholy.png",
       name: "Call Out My Name",
@@ -198,8 +189,5 @@ const TrackListData: TTrackList[] = [
     },
     dateAdded: "2 weeks ago",
     duration: "3:48",
-    isHovering: false,
   },
 ];
-
-export default TrackListData;

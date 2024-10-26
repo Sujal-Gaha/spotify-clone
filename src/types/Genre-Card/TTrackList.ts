@@ -1,5 +1,5 @@
-type TTrackList = {
-  "#": number;
+export type TTrackList = {
+  id: number;
   title: {
     image: string;
     name: string;
@@ -11,11 +11,8 @@ type TTrackList = {
   };
   dateAdded: string;
   duration: string;
-  isHovering: boolean;
 };
 
-type Tfeaturing = {
+export type Tfeaturing = {
   name: string;
 };
-
-export default TTrackList;
