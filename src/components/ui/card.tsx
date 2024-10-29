@@ -28,7 +28,7 @@ export const Card = ({ href, card }: { href: string; card: TCard }) => {
         {isHovering ? (
           <motion.div
             className="absolute bg-mainColour right-2 bottom-2 rounded-full p-3 text-2xl"
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.1 }}
           >
             <FaPlay className="ml-1" />
           </motion.div>
