@@ -1,0 +1,1 @@
+For complex components with multiple functionalities.
