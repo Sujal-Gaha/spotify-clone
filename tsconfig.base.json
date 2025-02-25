@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spotify-clone/libs/atoms/*": ["libs/atoms/*"],
-      "@spotify-clone/libs/compounds/*": ["libs/compounds/*"],
-      "@spotify-clone/libs/crystals/*": ["libs/crystals/*"],
-      "@spotify-clone/libs/molecules/*": ["libs/molecules/*"],
-      "@spotify-clone/libs/quarks/*": ["libs/quarks/*"]
+      "@spotify-clone/libs/atoms/*": ["libs/atoms/src/*"],
+      "@spotify-clone/libs/compounds/*": ["libs/compounds/src/*"],
+      "@spotify-clone/libs/crystals/*": ["libs/crystals/src/*"],
+      "@spotify-clone/libs/molecules/*": ["libs/molecules/src/*"],
+      "@spotify-clone/libs/quarks/*": ["libs/quarks/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

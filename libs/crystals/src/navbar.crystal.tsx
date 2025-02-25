@@ -1,4 +1,4 @@
-import { DownloadIcon } from '@spotify-clone/libs/quarks/download.quark';
+import { DownloadQuark } from '@spotify-clone/libs/quarks/download.quark';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 // import { useRouter } from 'next/navigation';
@@ -76,7 +76,7 @@ export const Navbar = () => {
         )}
         <div>
           <div className="py-1 px-2 h-8 w-[118.58px] bg-appBlack flex justify-center items-center rounded-3xl gap-[6px]">
-            <DownloadIcon />
+            <DownloadQuark />
             <span className="text-[13px] font-bold text-white">
               Install App
             </span>
