@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spotify-clone/libs/atoms": ["libs/atoms/src/index.ts"]
+      "@spotify-clone/libs/atoms": ["libs/atoms/src/index.ts"],
+      "@spotify-clone/libs/molecules": ["libs/molecules/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
