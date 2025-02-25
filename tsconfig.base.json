@@ -18,7 +18,8 @@
       "@spotify-clone/libs/atoms": ["libs/atoms/src/index.ts"],
       "@spotify-clone/libs/compounds": ["libs/compounds/src/index.ts"],
       "@spotify-clone/libs/crystals": ["libs/crystals/src/index.ts"],
-      "@spotify-clone/libs/molecules": ["libs/molecules/src/index.ts"]
+      "@spotify-clone/libs/molecules": ["libs/molecules/src/index.ts"],
+      "@spotify-clone/libs/quarks/*": ["libs/quarks/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
