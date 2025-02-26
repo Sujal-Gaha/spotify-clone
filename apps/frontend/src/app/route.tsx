@@ -1,7 +1,7 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 import { Layout } from './layout';
 import { AllPage } from '../pages/user/all.page';
-import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts/routes/routes';
+import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 
 export const router = createBrowserRouter([
   {

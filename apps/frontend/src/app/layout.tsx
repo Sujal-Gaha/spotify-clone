@@ -1,14 +1,14 @@
 import clsx from 'clsx';
 import { ReactNode } from 'react';
-import { useRightSidebarStore } from '../stores/useRightSidebarStore.flask';
+import { useRightSidebarStore } from '@spotify-clone/libs/flasks';
 import {
   LeftSidebarContainer,
   HomePageContentChanger,
   RightSidebar,
   AudioController,
 } from '@spotify-clone/libs/compounds';
-import { Navbar } from '@spotify-clone/libs/crystals/navbar.crystal';
-import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
+import { Navbar } from '@spotify-clone/libs/crystals';
+import { usePathState } from '@spotify-clone/libs/catalysts';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   const { isPathPremium } = usePathState();

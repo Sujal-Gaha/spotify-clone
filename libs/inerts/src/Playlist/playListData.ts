@@ -1,4 +1,4 @@
-import { TPlaylist } from '@spotify-clone/libs/compositions/TPlaylist';
+import { TPlaylist } from '@spotify-clone/libs/compositions';
 
 export const playListData: TPlaylist[] = [
   {

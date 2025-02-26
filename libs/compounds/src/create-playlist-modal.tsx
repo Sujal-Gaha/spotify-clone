@@ -1,4 +1,4 @@
-import { TPlaylist } from '@spotify-clone/libs/compositions/TPlaylist';
+import { TPlaylist } from '@spotify-clone/libs/compositions';
 import { useState } from 'react';
 import { FaRegFolder } from 'react-icons/fa';
 import { PiMusicNotesPlus } from 'react-icons/pi';

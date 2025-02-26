@@ -1,7 +1,7 @@
 import { useRightSidebarStore } from '@spotify-clone/libs/flasks';
 import { BsThreeDots } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
-import { AddedQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/added.quark';
+import { AddedQuark } from '@spotify-clone/libs/quarks';
 import { LuMusic3 } from 'react-icons/lu';
 import { useState } from 'react';
 import { IoPlay } from 'react-icons/io5';

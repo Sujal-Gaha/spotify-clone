@@ -1,7 +1,6 @@
-import { Playlistbar } from '../../components/PlaylistBar';
-import { homeAllContent } from '@spotify-clone/libs/inerts/home-all-content';
+import { homeAllContent } from '@spotify-clone/libs/inerts';
 import { Card } from '../../components/ui/card';
-import { Footer } from '@spotify-clone/libs/crystals/footer.crystal';
+import { Playlistbar, Footer } from '@spotify-clone/libs/crystals';
 
 export const AllPage = () => {
   return (

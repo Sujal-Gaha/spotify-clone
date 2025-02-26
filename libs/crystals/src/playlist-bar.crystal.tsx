@@ -11,7 +11,7 @@ const playlistBarContent = [
   },
 ];
 
-const PlaylistBar = () => {
+export const Playlistbar = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -25,21 +25,12 @@ const PlaylistBar = () => {
             onMouseLeave={() => setIsHovering(false)}
           >
             <div className="flex items-center gap-2">
-              <img
-                alt=""
-                src="/theIdol.png"
-                height={48}
-                width={48}
-                className="rounded-l-lg"
-              />
+              <img alt="" src="/theIdol.png" height={48} width={48} className="rounded-l-lg" />
               <p className="text-white text-sm font-semibold">The Weeknd</p>
             </div>
             <div>
               {isHovering ? (
-                <motion.div
-                  className="bg-mainColour rounded-full p-1.5 text-sm mr-3"
-                  whileHover={{ scale: 1.2 }}
-                >
+                <motion.div className="bg-mainColour rounded-full p-1.5 text-sm mr-3" whileHover={{ scale: 1.2 }}>
                   <FaPlay className="ml-1" />
                 </motion.div>
               ) : null}
@@ -50,5 +41,3 @@ const PlaylistBar = () => {
     </div>
   );
 };
-
-export default PlaylistBar;

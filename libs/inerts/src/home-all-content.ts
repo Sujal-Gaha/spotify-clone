@@ -1,4 +1,4 @@
-import { TCardContainer } from '@spotify-clone/libs/compositions/TCard';
+import { TCardContainer } from '@spotify-clone/libs/compositions';
 import { recommendationContent } from './recommendations';
 import { recentContent } from './recents';
 import { throwbackContent } from './throwback';

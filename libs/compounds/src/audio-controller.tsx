@@ -1,19 +1,21 @@
 import { useSongStore } from '@spotify-clone/libs/flasks';
-import { AddQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/add.quark';
-import { ShufflePlaylistQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/shuffle-playlist.quark';
-import { PreviousSongQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/previous-song.quark';
-import { PlayQuark } from '@spotify-clone/libs/quarks/play.quark';
-import { PauseQuark } from '@spotify-clone/libs/quarks/pause.quark';
-import { NextSongQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/next-song.quark';
-import { LoopOnceQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/loop-once.quark';
-import { TimePlayedQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/time-played.quark';
-import { NowPlayingActiveQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/now-playing-active.quark';
-import { LyricsQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/lyrics.quark';
-import { QueueQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/queue.quark';
-import { ConnectToADeviceQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/connect-to-a-device.quark';
-import { MuteQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/mute.quark';
-import { MiniPlayerQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/mini-player.quark';
-import { MaximizeWindowQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/maximize-window.quark';
+import {
+  AddQuark,
+  ShufflePlaylistQuark,
+  PreviousSongQuark,
+  PlayQuark,
+  PauseQuark,
+  NextSongQuark,
+  LoopOnceQuark,
+  TimePlayedQuark,
+  NowPlayingActiveQuark,
+  LyricsQuark,
+  QueueQuark,
+  ConnectToADeviceQuark,
+  MuteQuark,
+  MiniPlayerQuark,
+  MaximizeWindowQuark,
+} from '@spotify-clone/libs/quarks';
 
 export const AudioController = () => {
   const { isSongBeingPlayed } = useSongStore();

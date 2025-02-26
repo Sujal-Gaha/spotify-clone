@@ -1,4 +1,4 @@
-import { DownloadQuark } from '@spotify-clone/libs/quarks/download.quark';
+import { DownloadQuark } from '@spotify-clone/libs/quarks';
 import clsx from 'clsx';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { FiSearch } from 'react-icons/fi';
 import { GoBell } from 'react-icons/go';
 import { motion } from 'framer-motion';
-import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
+import { usePathState } from '@spotify-clone/libs/catalysts';
 
 export const Navbar = () => {
   const navigate = useNavigate();

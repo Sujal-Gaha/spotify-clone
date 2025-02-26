@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { Link, useLocation } from 'react-router-dom';
-import { TContentData } from '@spotify-clone/libs/compositions/TContentData';
+import { TContentData } from '@spotify-clone/libs/compositions';
 
 const contentData: TContentData[] = [
   {

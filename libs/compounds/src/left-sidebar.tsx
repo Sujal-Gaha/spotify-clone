@@ -2,13 +2,13 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi';
 import { GoHome, GoHomeFill } from 'react-icons/go';
-import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
+import { usePathState } from '@spotify-clone/libs/catalysts';
 import { useState } from 'react';
-import { LibraryQuark } from '@spotify-clone/libs/quarks/library.quark';
+import { LibraryQuark } from '@spotify-clone/libs/quarks';
 import { CiSearch } from 'react-icons/ci';
 import { FaArrowRight, FaPlus } from 'react-icons/fa';
 import { MdOutlineStorage } from 'react-icons/md';
-import { playListData } from '@spotify-clone/libs/inerts/Playlist/playListData';
+import { playListData } from '@spotify-clone/libs/inerts';
 import { CreatePlaylistModal } from './create-playlist-modal';
 
 export const UpperSidebar = () => {

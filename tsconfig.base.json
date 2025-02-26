@@ -16,15 +16,15 @@
     "baseUrl": ".",
     "paths": {
       "@spotify-clone/libs/alkali": ["libs/alkali/src/index.ts"],
-      "@spotify-clone/libs/atoms/*": ["libs/atoms/src/*"],
-      "@spotify-clone/libs/catalysts/*": ["libs/catalysts/src/*"],
-      "@spotify-clone/libs/compositions/*": ["libs/compositions/src/*"],
+      "@spotify-clone/libs/atoms": ["libs/atoms/src/index.ts"],
+      "@spotify-clone/libs/catalysts": ["libs/catalysts/src/index.ts"],
+      "@spotify-clone/libs/compositions": ["libs/compositions/src/index.ts"],
       "@spotify-clone/libs/compounds": ["libs/compounds/src/index.ts"],
-      "@spotify-clone/libs/crystals/*": ["libs/crystals/src/*"],
+      "@spotify-clone/libs/crystals": ["libs/crystals/src/index.ts"],
       "@spotify-clone/libs/flasks": ["libs/flasks/src/index.ts"],
-      "@spotify-clone/libs/inerts/*": ["libs/inerts/src/*"],
-      "@spotify-clone/libs/molecules/*": ["libs/molecules/src/*"],
-      "@spotify-clone/libs/quarks/*": ["libs/quarks/src/*"]
+      "@spotify-clone/libs/inerts": ["libs/inerts/src/index.ts"],
+      "@spotify-clone/libs/molecules": ["libs/molecules/index.ts"],
+      "@spotify-clone/libs/quarks": ["libs/quarks/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
