@@ -6,19 +6,15 @@ import HomePageContentChanger from '../components/ContentChanger/ContentChanger'
 import RightSideBarContainer from '../components/RightSideBar/RightSideBarContainer';
 import AudioControllerContainer from '../components/AudioControllerContainer';
 import { Navbar } from '@spotify-clone/libs/crystals/navbar.crystal';
+import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
-  const isPathPremium = false;
+  const { isPathPremium } = usePathState();
   const isContentTabsVisible = false;
 
   const { isRightSidebarOpen } = useRightSidebarStore();
   return (
-    <div
-      className={clsx(
-        'h-screen flex flex-col',
-        isPathPremium ? 'bg-white' : 'bg-black p-2 gap-2'
-      )}
-    >
+    <div className={clsx('h-screen flex flex-col', isPathPremium ? 'bg-white' : 'bg-black p-2 gap-2')}>
       {isPathPremium ? (
         children
       ) : (

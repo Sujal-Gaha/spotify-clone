@@ -1,46 +1,39 @@
 import { DownloadQuark } from '@spotify-clone/libs/quarks/download.quark';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
-// import { useRouter } from 'next/navigation';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { FiSearch } from 'react-icons/fi';
 import { GoBell } from 'react-icons/go';
 import { motion } from 'framer-motion';
+import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
 
 export const Navbar = () => {
-  //   const router = useRouter();
+  const navigate = useNavigate();
 
-  //   const handleLeftArrowClicked = () => router.back();
-  //   const handleRightArrowClicked = () => router.forward();
+  const handleGoBack = () => navigate(-1);
+  const handleGoForward = () => navigate(1);
 
-  const [isSearchFieldFocused, setIsSearchFieldFocused] =
-    useState<boolean>(false);
+  const [isSearchFieldFocused, setIsSearchFieldFocused] = useState<boolean>(false);
 
-  const isPathNonGradient = true;
-  const isPathSearch = false;
-  const isPathHome = true;
+  const { isPathSearch, isPathHome, isPathMusic, isPathPodcasts, isPathPlayist } = usePathState();
+
+  const isPathNonGradient = isPathHome || isPathSearch || isPathMusic || isPathPodcasts || isPathPlayist;
 
   return (
     <div
       className={clsx(
         'py-4 px-6 h-16 w-full flex justify-between rounded-t-xl',
-        isPathNonGradient
-          ? 'bg-none'
-          : 'bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]'
+        isPathNonGradient ? 'bg-none' : 'bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]'
       )}
     >
       <div className="flex gap-2 items-center">
-        <div
-        // onClick={handleLeftArrowClicked}
-        >
+        <div onClick={handleGoBack}>
           <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
             <FaChevronLeft />
           </div>
         </div>
-        <div
-        //  onClick={handleRightArrowClicked}
-        >
+        <div onClick={handleGoForward}>
           <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
             <FaChevronRight />
           </div>
@@ -77,18 +70,14 @@ export const Navbar = () => {
         <div>
           <div className="py-1 px-2 h-8 w-[118.58px] bg-appBlack flex justify-center items-center rounded-3xl gap-[6px]">
             <DownloadQuark />
-            <span className="text-[13px] font-bold text-white">
-              Install App
-            </span>
+            <span className="text-[13px] font-bold text-white">Install App</span>
           </div>
         </div>
         <div className="bg-appBlack rounded-full h-8 w-8 flex items-center justify-center">
           <GoBell className="text-lessFocusColour text-lg" />
         </div>
         <div className="bg-appBlack rounded-full h-8 w-8 flex items-center justify-center">
-          <span className="bg-profileContainerColour rounded-full h-6 w-6 text-center text-appBlack">
-            S
-          </span>
+          <span className="bg-profileContainerColour rounded-full h-6 w-6 text-center text-appBlack">S</span>
         </div>
       </div>
     </div>

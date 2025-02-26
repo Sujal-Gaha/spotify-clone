@@ -1,21 +1,8 @@
-import React from "react";
-import PlayList from "./PlayList";
-import { TPlaylist } from "@/types/TPlaylist";
+import PlayList from './PlayList';
+import { TPlaylist } from '@spotify-clone/libs/compositions/TPlaylist';
 
-interface IPlaylist {
-  playlists: TPlaylist[];
-}
-
-const PlayLists = ({ playlists }: IPlaylist) => {
-  return (
-    <>
-      {playlists.map((playlist, index) => {
-        return (
-          <PlayList key={index} image={playlist.image} title={playlist.title} />
-        );
-      })}
-    </>
-  );
+export const PlayLists = ({ playlists }: { playlists: TPlaylist[] }) => {
+  return playlists.map((playlist, index) => {
+    return <PlayList key={index} image={playlist.image} title={playlist.title} />;
+  });
 };
-
-export default PlayLists;

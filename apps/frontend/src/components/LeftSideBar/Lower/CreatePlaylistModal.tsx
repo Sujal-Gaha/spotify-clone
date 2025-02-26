@@ -1,9 +1,7 @@
-"use client";
-
-import { TPlaylist } from "@/types/TPlaylist";
-import { useState } from "react";
-import { FaRegFolder } from "react-icons/fa";
-import { PiMusicNotesPlus } from "react-icons/pi";
+import { TPlaylist } from '@spotify-clone/libs/compositions/TPlaylist';
+import { useState } from 'react';
+import { FaRegFolder } from 'react-icons/fa';
+import { PiMusicNotesPlus } from 'react-icons/pi';
 
 interface ICreatePlaylist {
   playlists: TPlaylist[];
@@ -12,19 +10,15 @@ interface ICreatePlaylist {
 }
 
 const CreatePlaylistModal = (props: ICreatePlaylist) => {
-  const {
-    playlists,
-    setPlaylists,
-    setIsCreatePlaylistModalOpen: setIsModalOpen,
-  } = props;
+  const { playlists, setPlaylists, setIsCreatePlaylistModalOpen: setIsModalOpen } = props;
 
   const [count, setCount] = useState(playlists.length);
 
   const handleCreatePlaylistFolder = () => {
     const newPlaylist = {
       id: 1,
-      image: "/theIdol.png",
-      title: "New Folder",
+      image: '/theIdol.png',
+      title: 'New Folder',
     };
 
     const updatedPlaylist = [newPlaylist].concat(playlists);
@@ -36,7 +30,7 @@ const CreatePlaylistModal = (props: ICreatePlaylist) => {
 
     const newPlaylist = {
       id: 2,
-      image: "/theIdol.png",
+      image: '/theIdol.png',
       title: `My Playlist #${count}`,
     };
 

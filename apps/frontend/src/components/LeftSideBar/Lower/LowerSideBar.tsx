@@ -4,24 +4,20 @@ import { FaArrowRight, FaPlus } from 'react-icons/fa';
 import { MdOutlineStorage } from 'react-icons/md';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import PlayLists from './PlayLists';
+import { PlayLists } from './PlayLists';
 import { playListData } from '@spotify-clone/libs/inerts/Playlist/playListData';
 import CreatePlaylistModal from './CreatePlaylistModal';
 
 export const LowerSideBar = () => {
   const [playlists, setPlaylists] = useState(playListData);
 
-  const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] =
-    useState(false);
+  const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] = useState(false);
 
   return (
     <div className="bg-sectionColour rounded-lg flex flex-col h-full">
       <div className="h-14 flex items-center justify-center px-4 py-2">
         <div className="h-10 w-[388px] flex justify-between px-1">
-          <Link
-            to={'/playlist'}
-            className="flex items-center w-[142px] gap-4 justify-center"
-          >
+          <Link to={'/playlist'} className="flex items-center w-[142px] gap-4 justify-center">
             <LibraryQuark />
             <p className="text-white font-medium">Your Library</p>
           </Link>

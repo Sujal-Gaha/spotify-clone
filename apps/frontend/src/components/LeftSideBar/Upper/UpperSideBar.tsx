@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi';
 import { GoHome, GoHomeFill } from 'react-icons/go';
+import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
 
 export const UpperSideBar = () => {
-  const isPathHome = true;
-  const isPathSearch = false;
+  const { isPathHome, isPathSearch } = usePathState();
 
   return (
     <div className="h-28 bg-sectionColour px-3 py-2 rounded-lg">
@@ -19,11 +19,7 @@ export const UpperSideBar = () => {
                 isPathHome ? 'text-white' : 'text-lessFocusColour'
               )}
             >
-              {isPathHome ? (
-                <GoHomeFill className="text-[28px]" />
-              ) : (
-                <GoHome className="text-[28px]" />
-              )}
+              {isPathHome ? <GoHomeFill className="text-[28px]" /> : <GoHome className="text-[28px]" />}
               <p className="font-bold text-base active:underline">Home</p>
             </Link>
           </div>
