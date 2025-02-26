@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@spotify-clone/libs/atoms/*": ["libs/atoms/src/*"],
+      "@spotify-clone/libs/compositions/*": ["libs/compositions/src/*"],
       "@spotify-clone/libs/compounds/*": ["libs/compounds/src/*"],
       "@spotify-clone/libs/crystals/*": ["libs/crystals/src/*"],
       "@spotify-clone/libs/inerts/*": ["libs/inerts/src/*"],
