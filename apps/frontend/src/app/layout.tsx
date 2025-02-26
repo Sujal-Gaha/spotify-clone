@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useRightSidebarStore } from '../stores/useRightSidebarStore';
-import LeftSideBarContainer from '../components/LeftSideBar/LeftSideBarContainer';
-import HomePageContentChanger from '../components/ContentChanger/ContentChanger';
+import { LeftSidebarContainer } from '@spotify-clone/libs/compounds/left-sidebar';
+import { HomePageContentChanger } from '@spotify-clone/libs/compounds/content';
 import RightSideBarContainer from '../components/RightSideBar/RightSideBarContainer';
 import AudioControllerContainer from '../components/AudioControllerContainer';
 import { Navbar } from '@spotify-clone/libs/crystals/navbar.crystal';
@@ -13,6 +13,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   const isContentTabsVisible = false;
 
   const { isRightSidebarOpen } = useRightSidebarStore();
+
   return (
     <div className={clsx('h-screen flex flex-col', isPathPremium ? 'bg-white' : 'bg-black p-2 gap-2')}>
       {isPathPremium ? (
@@ -20,7 +21,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       ) : (
         <>
           <div className="flex gap-2">
-            <LeftSideBarContainer />
+            <LeftSidebarContainer />
             <div
               className={clsx(
                 'h-[90vh] bg-sectionColour rounded-lg flex flex-col items-center',

@@ -9,7 +9,7 @@ interface ICreatePlaylist {
   setIsCreatePlaylistModalOpen: (isCreatePlaylistModalOpen: boolean) => void;
 }
 
-const CreatePlaylistModal = (props: ICreatePlaylist) => {
+export const CreatePlaylistModal = (props: ICreatePlaylist) => {
   const { playlists, setPlaylists, setIsCreatePlaylistModalOpen: setIsModalOpen } = props;
 
   const [count, setCount] = useState(playlists.length);
@@ -63,5 +63,3 @@ const CreatePlaylistModal = (props: ICreatePlaylist) => {
     </div>
   );
 };
-
-export default CreatePlaylistModal;

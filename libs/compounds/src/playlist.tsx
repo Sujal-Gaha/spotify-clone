@@ -1,25 +1,18 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface IPlayList {
+interface IPlaylist {
   image: string;
   title: string;
 }
 
-const PlayList = ({ image, title }: IPlayList) => {
+const PlayList = ({ image, title }: IPlaylist) => {
   return (
     <Link
       to={'/playlist/1'}
       className="h-16 w-[404px] flex justify-start p-2 gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-500 rounded"
     >
       <div className="h-12 w-12">
-        <img
-          src={image}
-          alt="album cover"
-          width={50}
-          height={50}
-          className="rounded"
-        />
+        <img src={image} alt="album cover" width={50} height={50} className="rounded" />
       </div>
       <div className="flex flex-col justify-center gap-1">
         <p className="text-white text-sm">{title}</p>
@@ -29,4 +22,8 @@ const PlayList = ({ image, title }: IPlayList) => {
   );
 };
 
-export default PlayList;
+export const PlayLists = ({ playlists }: { playlists: IPlaylist[] }) => {
+  return playlists.map((playlist, index) => {
+    return <PlayList key={index} image={playlist.image} title={playlist.title} />;
+  });
+};
