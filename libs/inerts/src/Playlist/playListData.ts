@@ -1,11 +1,9 @@
-import { TPlaylist } from '../../types';
+import { TPlaylist } from '@spotify-clone/libs/compositions/TPlaylist';
 
-const playListData: TPlaylist[] = [
+export const playListData: TPlaylist[] = [
   {
     id: 0,
     image: '/theIdol.png',
     title: 'The Weeknd',
   },
 ];
-
-export default playListData;

@@ -1,14 +1,12 @@
-import { TCardContainer } from '../types';
-import {
-  featuredChartsContent,
-  moodContent,
-  freshNewMusicContent,
-  recentContent,
-  throwbackContent,
-  todaysBiggestHitsContent,
-  trySomethingElseContent,
-  recommendationContent,
-} from './index';
+import { TCardContainer } from '@spotify-clone/libs/compositions/TCard';
+import { recommendationContent } from './recommendations';
+import { recentContent } from './recents';
+import { throwbackContent } from './throwback';
+import { todaysBiggestHitsContent } from './todays-biggest-hits';
+import { trySomethingElseContent } from './try-something-else';
+import { featuredChartsContent } from './featured-charts';
+import { moodContent } from './moods';
+import { freshNewMusicContent } from './fresh-new-music';
 
 export const homeAllContent: TCardContainer[] = [
   {

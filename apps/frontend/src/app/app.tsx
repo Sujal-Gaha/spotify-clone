@@ -1,11 +1,8 @@
-import NxWelcome from './nx-welcome';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './route';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="frontend" />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

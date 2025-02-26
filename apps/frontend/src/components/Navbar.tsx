@@ -1,46 +1,56 @@
-import { DownloadQuark } from '@spotify-clone/libs/quarks/download.quark';
-import clsx from 'clsx';
-import { Link } from 'react-router-dom';
-// import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
-import { FiSearch } from 'react-icons/fi';
-import { GoBell } from 'react-icons/go';
-import { motion } from 'framer-motion';
+"use client";
+
+import { DownloadIcon } from "@/components/icons/download";
+import clsx from "clsx";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FiSearch } from "react-icons/fi";
+import { GoBell } from "react-icons/go";
+import { motion } from "framer-motion";
+import { usePathState } from "@/utils/usePathState";
 
 export const Navbar = () => {
-  //   const router = useRouter();
+  const {
+    isPathHome,
+    isPathSearch,
+    isPathMusic,
+    isPathPodcasts,
+    isPathPlayist,
+  } = usePathState();
 
-  //   const handleLeftArrowClicked = () => router.back();
-  //   const handleRightArrowClicked = () => router.forward();
+  const isPathNonGradient =
+    isPathHome ||
+    isPathSearch ||
+    isPathMusic ||
+    isPathPodcasts ||
+    isPathPlayist;
+
+  const router = useRouter();
+
+  const handleLeftArrowClicked = () => router.back();
+  const handleRightArrowClicked = () => router.forward();
 
   const [isSearchFieldFocused, setIsSearchFieldFocused] =
-    useState<boolean>(false);
-
-  const isPathNonGradient = true;
-  const isPathSearch = false;
-  const isPathHome = true;
+    useState<Boolean>(false);
 
   return (
     <div
       className={clsx(
-        'py-4 px-6 h-16 w-full flex justify-between rounded-t-xl',
+        "py-4 px-6 h-16 w-full flex justify-between rounded-t-xl",
         isPathNonGradient
-          ? 'bg-none'
-          : 'bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]'
+          ? "bg-none"
+          : "bg-gradient-to-t from-[#3d7ecc] to-[#4a97f5]"
       )}
     >
       <div className="flex gap-2 items-center">
-        <div
-        // onClick={handleLeftArrowClicked}
-        >
+        <div onClick={handleLeftArrowClicked}>
           <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
             <FaChevronLeft />
           </div>
         </div>
-        <div
-        //  onClick={handleRightArrowClicked}
-        >
+        <div onClick={handleRightArrowClicked}>
           <div className="bg-[#0e0e0e] text-[#a3a3a3] hover:text-white p-2 rounded-full cursor-pointer ease-in-out delay-75">
             <FaChevronRight />
           </div>
@@ -56,8 +66,8 @@ export const Navbar = () => {
             />
             <FiSearch
               className={clsx(
-                'absolute text-lg top-[15px] left-3',
-                isSearchFieldFocused && 'text-white font-extrabold'
+                "absolute text-lg top-[15px] left-3",
+                isSearchFieldFocused && "text-white font-extrabold"
               )}
             />
           </div>
@@ -69,14 +79,14 @@ export const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             className="bg-white w-[142.98px] h-8 py-2 px-3 text-[13px] rounded-3xl flex items-center justify-center cursor-pointer"
           >
-            <Link to="/premium">
+            <Link href={"/premium"}>
               <span className="text-black font-bold">Explore Premium</span>
             </Link>
           </motion.div>
         )}
         <div>
           <div className="py-1 px-2 h-8 w-[118.58px] bg-appBlack flex justify-center items-center rounded-3xl gap-[6px]">
-            <DownloadQuark />
+            <DownloadIcon />
             <span className="text-[13px] font-bold text-white">
               Install App
             </span>
