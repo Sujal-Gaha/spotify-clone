@@ -8,7 +8,6 @@ import { LibraryQuark } from '@spotify-clone/libs/quarks/library.quark';
 import { CiSearch } from 'react-icons/ci';
 import { FaArrowRight, FaPlus } from 'react-icons/fa';
 import { MdOutlineStorage } from 'react-icons/md';
-import { PlayLists } from './playlist';
 import { playListData } from '@spotify-clone/libs/inerts/Playlist/playListData';
 import { CreatePlaylistModal } from './create-playlist-modal';
 
@@ -49,6 +48,29 @@ export const UpperSidebar = () => {
       </div>
     </div>
   );
+};
+
+interface IPlaylist {
+  image: string;
+  title: string;
+}
+
+const PlayLists = ({ playlists }: { playlists: IPlaylist[] }) => {
+  return playlists.map((playlist, index) => (
+    <Link
+      key={index}
+      to={'/playlist/1'}
+      className="h-16 w-[404px] flex justify-start p-2 gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-500 rounded"
+    >
+      <div className="h-12 w-12">
+        <img src={playlist.image} alt="album cover" width={50} height={50} className="rounded" />
+      </div>
+      <div className="flex flex-col justify-center gap-1">
+        <p className="text-white text-sm">{playlist.title}</p>
+        <p className="text-lessFocusColour text-xs">Playlist . Sujal Gaha</p>
+      </div>
+    </Link>
+  ));
 };
 
 const LowerSidebar = () => {

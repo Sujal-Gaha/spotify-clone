@@ -1,4 +1,4 @@
-import { useSongStore } from '../stores/useSongStore';
+import { useSongStore } from '@spotify-clone/libs/flasks';
 import { AddQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/add.quark';
 import { ShufflePlaylistQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/shuffle-playlist.quark';
 import { PreviousSongQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/previous-song.quark';
@@ -15,20 +15,14 @@ import { MuteQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/mut
 import { MiniPlayerQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/mini-player.quark';
 import { MaximizeWindowQuark } from '@spotify-clone/libs/quarks/audio-controller-quark/maximize-window.quark';
 
-const AudioControllerContainer = () => {
+export const AudioController = () => {
   const { isSongBeingPlayed } = useSongStore();
 
   return (
     <div className="w-full h-[72px] pt-1 flex items-start gap-5">
       <div className="w-[563.19px] h-fit flex items-center gap-3 px-1">
         <div className="h-[58px]">
-          <img
-            alt=""
-            src="/theIdol.png"
-            height={58}
-            width={58}
-            className="rounded-lg"
-          />
+          <img alt="" src="/theIdol.png" height={58} width={58} className="rounded-lg" />
         </div>
         <div className="flex flex-col items-left">
           <p className="text-white text-sm">One of your girls</p>
@@ -70,5 +64,3 @@ const AudioControllerContainer = () => {
     </div>
   );
 };
-
-export default AudioControllerContainer;

@@ -19,7 +19,7 @@
       "@spotify-clone/libs/atoms/*": ["libs/atoms/src/*"],
       "@spotify-clone/libs/catalysts/*": ["libs/catalysts/src/*"],
       "@spotify-clone/libs/compositions/*": ["libs/compositions/src/*"],
-      "@spotify-clone/libs/compounds/*": ["libs/compounds/src/*"],
+      "@spotify-clone/libs/compounds": ["libs/compounds/src/index.ts"],
       "@spotify-clone/libs/crystals/*": ["libs/crystals/src/*"],
       "@spotify-clone/libs/flasks": ["libs/flasks/src/index.ts"],
       "@spotify-clone/libs/inerts/*": ["libs/inerts/src/*"],

@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 import { ReactNode } from 'react';
-import { useRightSidebarStore } from '../stores/useRightSidebarStore';
-import { LeftSidebarContainer } from '@spotify-clone/libs/compounds/left-sidebar';
-import { HomePageContentChanger } from '@spotify-clone/libs/compounds/content';
-import RightSideBarContainer from '../components/RightSideBar/RightSideBarContainer';
-import AudioControllerContainer from '../components/AudioControllerContainer';
+import { useRightSidebarStore } from '../stores/useRightSidebarStore.flask';
+import {
+  LeftSidebarContainer,
+  HomePageContentChanger,
+  RightSidebar,
+  AudioController,
+} from '@spotify-clone/libs/compounds';
 import { Navbar } from '@spotify-clone/libs/crystals/navbar.crystal';
 import { usePathState } from '@spotify-clone/libs/catalysts/utils/usePathState';
 
@@ -32,9 +34,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
               {isContentTabsVisible ? <HomePageContentChanger /> : null}
               {children}
             </div>
-            {isRightSidebarOpen && <RightSideBarContainer />}
+            {isRightSidebarOpen && <RightSidebar />}
           </div>
-          <AudioControllerContainer />
+          <AudioController />
         </>
       )}
     </div>
