@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@spotify-clone/libs/alkali": ["libs/alkali/src/index.ts"],
+      "@spotify-clone/libs/alkalis": ["libs/alkalis/src/index.ts"],
       "@spotify-clone/libs/atoms": ["libs/atoms/src/index.ts"],
       "@spotify-clone/libs/catalysts": ["libs/catalysts/src/index.ts"],
       "@spotify-clone/libs/compositions": ["libs/compositions/src/index.ts"],

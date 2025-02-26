@@ -5,7 +5,7 @@ import { AddedQuark } from '@spotify-clone/libs/quarks';
 import { LuMusic3 } from 'react-icons/lu';
 import { useState } from 'react';
 import { IoPlay } from 'react-icons/io5';
-import { ButtonAlkali } from '@spotify-clone/libs/alkali';
+import { ButtonAlkali } from '@spotify-clone/libs/alkalis';
 
 const RecommendationCard = () => {
   return (

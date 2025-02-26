@@ -1,4 +1,4 @@
-import { TCard } from '../../types';
+import { TCard } from '@spotify-clone/libs/compositions';
 
 export const RecommendationsCarouselData: TCard[] = [
   {

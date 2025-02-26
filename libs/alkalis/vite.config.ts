@@ -8,7 +8,7 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/alkali',
+  cacheDir: '../../node_modules/.vite/libs/alkalis',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -22,7 +22,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/libs/alkali',
+    outDir: '../../dist/libs/alkalis',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -31,7 +31,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'alkali',
+      name: 'alkalis',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
@@ -49,7 +49,7 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/libs/alkali',
+      reportsDirectory: '../../coverage/libs/alkalis',
       provider: 'v8',
     },
   },

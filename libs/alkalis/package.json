@@ -1,5 +1,5 @@
 {
-  "name": "@spotify-clone/libs/crystals",
+  "name": "@spotify-clone/libs/alkalis",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
