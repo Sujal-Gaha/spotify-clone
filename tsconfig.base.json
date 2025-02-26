@@ -21,6 +21,7 @@
       "@spotify-clone/libs/compositions/*": ["libs/compositions/src/*"],
       "@spotify-clone/libs/compounds/*": ["libs/compounds/src/*"],
       "@spotify-clone/libs/crystals/*": ["libs/crystals/src/*"],
+      "@spotify-clone/libs/flasks": ["libs/flasks/src/index.ts"],
       "@spotify-clone/libs/inerts/*": ["libs/inerts/src/*"],
       "@spotify-clone/libs/molecules/*": ["libs/molecules/src/*"],
       "@spotify-clone/libs/quarks/*": ["libs/quarks/src/*"]
