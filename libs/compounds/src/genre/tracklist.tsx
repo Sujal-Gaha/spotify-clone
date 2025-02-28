@@ -31,6 +31,8 @@ export const TrackBar = ({ track }: { track: TTrackList }) => {
                       {feature}
                     </span>
                   );
+                } else {
+                  return null;
                 }
               })}
             </p>
