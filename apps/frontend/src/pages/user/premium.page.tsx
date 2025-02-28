@@ -8,12 +8,12 @@ import {
 
 export const PremiumPage = () => {
   return (
-    <>
+    <div className="w-full">
       <PremiumNavbar />
       <PremiumBanner />
       <PremiumServices />
       <PremiumPlan />
       <PremiumFooter />
-    </>
+    </div>
   );
 };

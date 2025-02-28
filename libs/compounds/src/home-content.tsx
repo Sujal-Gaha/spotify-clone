@@ -36,7 +36,7 @@ export const HomePageContentChanger = () => {
           )}
           to={content.path}
         >
-          <span>{content.path}</span>
+          <span>{content.title}</span>
         </Link>
       ))}
     </div>
