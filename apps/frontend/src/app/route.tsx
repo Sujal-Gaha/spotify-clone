@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
 import { SidebarLayout } from './sidebar-layout';
 import { AllPage } from '../pages/user/all.page';
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
@@ -10,44 +10,34 @@ import { GenrePage } from '../pages/user/genre.page';
 
 export const router = createBrowserRouter([
   {
-    path: _FULL_ROUTES.HOME,
+    path: '',
     element: (
       <SidebarLayout>
-        <AllPage />
+        <Outlet />
       </SidebarLayout>
     ),
-  },
-  {
-    path: _FULL_ROUTES.SEARCH,
-    element: (
-      <SidebarLayout>
-        <SearchPage />
-      </SidebarLayout>
-    ),
-  },
-  {
-    path: _FULL_ROUTES.PODCASTS,
-    element: (
-      <SidebarLayout>
-        <PodcastsPage />
-      </SidebarLayout>
-    ),
-  },
-  {
-    path: _FULL_ROUTES.MUSIC,
-    element: (
-      <SidebarLayout>
-        <MusicPage />
-      </SidebarLayout>
-    ),
-  },
-  {
-    path: `${_FULL_ROUTES.GENRE}/:genreId/card/:cardId`,
-    element: (
-      <SidebarLayout>
-        <GenrePage />
-      </SidebarLayout>
-    ),
+    children: [
+      {
+        path: _FULL_ROUTES.HOME,
+        element: <AllPage />,
+      },
+      {
+        path: _FULL_ROUTES.SEARCH,
+        element: <SearchPage />,
+      },
+      {
+        path: _FULL_ROUTES.PODCASTS,
+        element: <PodcastsPage />,
+      },
+      {
+        path: _FULL_ROUTES.MUSIC,
+        element: <MusicPage />,
+      },
+      {
+        path: `${_FULL_ROUTES.GENRE}/:genreId/card/:cardId`,
+        element: <GenrePage />,
+      },
+    ],
   },
 
   {
