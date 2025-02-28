@@ -70,7 +70,7 @@ const PlanCardContainer = ({ PlanData }: { PlanData: TPlan[] }) => {
   );
 };
 
-export const Plan = () => {
+export const PremiumPlan = () => {
   const [planData, setPlanData] = useState(PlanData);
 
   return (

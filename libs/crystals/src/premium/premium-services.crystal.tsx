@@ -1,6 +1,6 @@
 import { servicesProvided } from '@spotify-clone/libs/inerts';
 
-export const Services = () => {
+export const PremiumServices = () => {
   return (
     <div className="h-[571px] w-full pt-[72px] pb-[75px] flex items-center justify-center">
       <div className="h-[424px] w-[1140px] flex flex-col items-center justify-between">
