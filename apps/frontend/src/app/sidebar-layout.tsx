@@ -10,7 +10,7 @@ import {
 import { Navbar } from '@spotify-clone/libs/crystals';
 import { usePathState } from '@spotify-clone/libs/catalysts';
 
-export const Layout = ({ children }: { children: ReactNode }) => {
+export const SidebarLayout = ({ children }: { children: ReactNode }) => {
   const { isPathPremium } = usePathState();
   const isContentTabsVisible = false;
 
