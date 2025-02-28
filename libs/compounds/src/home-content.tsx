@@ -24,7 +24,7 @@ export const HomePageContentChanger = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="w-full h-14 flex gap-2 text-white text-sm px-6 font-medium pt-2">
+    <div className="w-full h-14 flex gap-2 text-white text-sm px-8 font-medium pt-2">
       {contentData.map((content) => (
         <Link
           key={content.id}

@@ -28,8 +28,10 @@ export const SidebarLayout = ({ children }: { children: ReactNode }) => {
           )}
         >
           <Navbar />
-          {isContentTabsVisible ? <HomePageContentChanger /> : null}
-          {children}
+          <div className="overflow-y-auto no-scrollbar">
+            {isContentTabsVisible ? <HomePageContentChanger /> : null}
+            {children}
+          </div>
         </div>
         {isRightSidebarOpen && <RightSidebar />}
       </div>
