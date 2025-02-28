@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet } from 'react-router-dom';
 import { Layout } from './layout';
 import { AllPage } from '../pages/user/all.page';
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
+import { SearchPage } from '../pages/user/search.page';
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
     path: _FULL_ROUTES.SEARCH,
     element: (
       <Layout>
-        <Outlet />
+        <SearchPage />
       </Layout>
     ),
   },
