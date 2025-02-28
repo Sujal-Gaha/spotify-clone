@@ -5,6 +5,7 @@ import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 import { SearchPage } from '../pages/user/search.page';
 import { PodcastsPage } from '../pages/user/podcasts.page';
 import { PremiumPage } from '../pages/user/premium.page';
+import { MusicPage } from '../pages/user/music.page';
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ export const router = createBrowserRouter([
     element: (
       <SidebarLayout>
         <PodcastsPage />
+      </SidebarLayout>
+    ),
+  },
+  {
+    path: _FULL_ROUTES.MUSIC,
+    element: (
+      <SidebarLayout>
+        <MusicPage />
       </SidebarLayout>
     ),
   },
