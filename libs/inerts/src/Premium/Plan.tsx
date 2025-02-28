@@ -1,6 +1,6 @@
-import { TPlan } from '../../types';
+import { TPlan } from '@spotify-clone/libs/compositions';
 
-const PlanData: TPlan[] = [
+export const PlanData: TPlan[] = [
   {
     numberOfButtons: 1,
     title: 'Mini',
@@ -35,8 +35,7 @@ const PlanData: TPlan[] = [
         facility: 'Download 10k songs/device on 5 mobile devices',
       },
     ],
-    termsAndConditions:
-      '1 month free not available for users who have already tried Premium.',
+    termsAndConditions: '1 month free not available for users who have already tried Premium.',
   },
   {
     numberOfButtons: 2,
@@ -57,8 +56,7 @@ const PlanData: TPlan[] = [
         facility: 'Download 10k songs/device, on 5 devices per account',
       },
     ],
-    termsAndConditions:
-      '1 month free not available for users who have already tried Premium.',
+    termsAndConditions: '1 month free not available for users who have already tried Premium.',
   },
   {
     numberOfButtons: 2,
@@ -82,9 +80,6 @@ const PlanData: TPlan[] = [
         facility: 'Download 10k songs/device on 5 devices',
       },
     ],
-    termsAndConditions:
-      '1 month free not available for users who have already tried Premium.',
+    termsAndConditions: '1 month free not available for users who have already tried Premium.',
   },
 ];
-
-export default PlanData;

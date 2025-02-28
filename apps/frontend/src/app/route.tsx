@@ -1,9 +1,10 @@
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { SidebarLayout } from './sidebar-layout';
 import { AllPage } from '../pages/user/all.page';
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 import { SearchPage } from '../pages/user/search.page';
 import { PodcastsPage } from '../pages/user/podcasts.page';
+import { PremiumPage } from '../pages/user/premium.page';
 
 export const router = createBrowserRouter([
   {
@@ -23,14 +24,6 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: _FULL_ROUTES.MUSIC,
-    element: (
-      <SidebarLayout>
-        <Outlet />
-      </SidebarLayout>
-    ),
-  },
-  {
     path: _FULL_ROUTES.PODCASTS,
     element: (
       <SidebarLayout>
@@ -39,11 +32,7 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: _FULL_ROUTES.PLAYLIST,
-    element: (
-      <SidebarLayout>
-        <Outlet />
-      </SidebarLayout>
-    ),
+    path: _FULL_ROUTES.PREMIUM,
+    element: <PremiumPage />,
   },
 ]);

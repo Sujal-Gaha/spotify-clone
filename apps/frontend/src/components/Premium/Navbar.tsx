@@ -1,9 +1,9 @@
-import { LogoIcon } from "@/components/icons/premium/logo";
+import { LogoQuark } from '@spotify-clone/libs/quarks';
 
-const Navbar = () => {
+export const PremiumNavbar = () => {
   return (
     <div className="h-20 w-full py-5 bg-black flex justify-around items-center">
-      <LogoIcon />
+      <LogoQuark />
       <div className="flex items-center text-white gap-9 font-bold">
         <p>Premium</p>
         <p>Support</p>
@@ -15,5 +15,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

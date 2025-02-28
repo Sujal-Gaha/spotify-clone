@@ -1,9 +1,5 @@
-import { LogoIcon } from "../icons/premium/logo";
-import { footerData } from "@/constants/Premium/footer";
-import { EarthIcon } from "@/components/icons/premium/earth";
-import { InstagramIcon } from "@/components/icons/premium/instagram";
-import { TwitterIcon } from "@/components/icons/premium/twitter";
-import { FacebookIcon } from "@/components/icons/premium/facebook";
+import { footerData } from '@spotify-clone/libs/inerts';
+import { EarthQuark, FacebookQuark, InstagramQuark, LogoQuark, TwitterQuark } from '@spotify-clone/libs/quarks';
 
 export const FooterPremium = () => {
   return (
@@ -20,13 +16,10 @@ const FooterTopLayout = () => {
   return (
     <div className="h-full flex justify-between text-lessFocusColour text-xs">
       <div className="flex gap-12">
-        <LogoIcon />
+        <LogoQuark />
         <div className="w-[585px] h-full flex">
           {footerData.map((data, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-6 h-full w-full pt-4 px-[15px]"
-            >
+            <div key={index} className="flex flex-col gap-6 h-full w-full pt-4 px-[15px]">
               <div className="uppercase font-bold">{data.title}</div>
               <div className="flex flex-col gap-[18px] text-base font-normal text-white">
                 {data.links.map((link, index) => (
@@ -39,12 +32,12 @@ const FooterTopLayout = () => {
       </div>
       <div className="flex flex-col justify-between h-full">
         <div className="flex gap-[15px]">
-          <InstagramIcon />
-          <TwitterIcon />
-          <FacebookIcon />
+          <InstagramQuark />
+          <TwitterQuark />
+          <FacebookQuark />
         </div>
         <div className="flex gap-[0.5px] items-center justify-end py-[13px] px-[4.3px]">
-          <EarthIcon /> <span>Nepal (English)</span>
+          <EarthQuark /> <span>Nepal (English)</span>
         </div>
       </div>
     </div>

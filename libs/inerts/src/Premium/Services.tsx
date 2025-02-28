@@ -11,7 +11,7 @@ export type TServices = {
   description: string;
 };
 
-export const ServicesProvided: TServices[] = [
+export const servicesProvided: TServices[] = [
   {
     icon: <FirstServiceQuark />,
     title: 'Ad-free music listening',
