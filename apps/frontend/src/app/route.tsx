@@ -3,6 +3,7 @@ import { SidebarLayout } from './sidebar-layout';
 import { AllPage } from '../pages/user/all.page';
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 import { SearchPage } from '../pages/user/search.page';
+import { PodcastsPage } from '../pages/user/podcasts.page';
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
     path: _FULL_ROUTES.PODCASTS,
     element: (
       <SidebarLayout>
-        <Outlet />
+        <PodcastsPage />
       </SidebarLayout>
     ),
   },
