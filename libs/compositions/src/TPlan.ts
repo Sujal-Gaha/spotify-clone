@@ -1,12 +1,8 @@
-export type TFacilities = {
-  facility: string;
-};
-
 export type TPlan = {
-  numberOfButtons: number;
+  has_free_trial: boolean;
   title: string;
   description: string;
-  numberOfAccountsFor: string;
-  facilities: TFacilities[];
+  number_of_account_for: string;
+  facilities: string[];
   termsAndConditions: string;
 };
