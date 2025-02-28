@@ -6,6 +6,7 @@ import { SearchPage } from '../pages/user/search.page';
 import { PodcastsPage } from '../pages/user/podcasts.page';
 import { PremiumPage } from '../pages/user/premium.page';
 import { MusicPage } from '../pages/user/music.page';
+import { GenrePage } from '../pages/user/genre.page';
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,15 @@ export const router = createBrowserRouter([
       </SidebarLayout>
     ),
   },
+  {
+    path: `${_FULL_ROUTES.GENRE}/:genreId/card/:cardId`,
+    element: (
+      <SidebarLayout>
+        <GenrePage />
+      </SidebarLayout>
+    ),
+  },
+
   {
     path: _FULL_ROUTES.PREMIUM,
     element: <PremiumPage />,

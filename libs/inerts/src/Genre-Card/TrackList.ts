@@ -1,6 +1,6 @@
-import { TTrackList } from '../../types';
+import { TTrackList } from '@spotify-clone/libs/compositions';
 
-export const TrackListData: TTrackList[] = [
+export const trackListData: TTrackList[] = [
   {
     id: 1,
     title: {

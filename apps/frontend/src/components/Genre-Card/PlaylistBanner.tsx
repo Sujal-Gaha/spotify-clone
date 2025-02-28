@@ -1,13 +1,10 @@
-"use client";
+import { homeAllContent } from '@spotify-clone/libs/inerts';
 
-import Image from "next/image";
-import { homeAllContent } from "@/constants";
-
-const PlaylistBanner = (props: { genreId: number; cardId: number }) => {
+const PlaylistBanner = (props: { genreId: string; cardId: string }) => {
   return (
     <div className="h-[276px] w-full bg-gradient-to-t from-[#264d7c] to-[#3d7ecc] flex justify-center items-center">
       <div className="flex gap-4 items-end">
-        <Image
+        <img
           alt=""
           src={`${homeAllContent[props.genreId].content[props.cardId].image}`}
           height={232}

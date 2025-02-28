@@ -1,6 +1,6 @@
 import { TCard } from '@spotify-clone/libs/compositions';
 
-export const RecommendationsCarouselData: TCard[] = [
+export const recommendationsCarouselData: TCard[] = [
   {
     _id: 1,
     image: '/Genre-Card/recommendation/theWeeknd.png',

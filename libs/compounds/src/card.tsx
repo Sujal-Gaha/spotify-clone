@@ -1,4 +1,4 @@
-import { TCard } from '@spotify-clone/libs/compositions/TCard';
+import { TCard } from '@spotify-clone/libs/compositions';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -15,13 +15,7 @@ export const Card = ({ href, card }: { href: string; card: TCard }) => {
       onMouseOver={() => setIsHovering(true)}
     >
       <div className="relative">
-        <img
-          alt="album"
-          src={card.image}
-          height={205}
-          width={205}
-          className="rounded-lg"
-        />
+        <img alt="album" src={card.image} height={205} width={205} className="rounded-lg" />
         {isHovering ? (
           <motion.div
             className="absolute bg-mainColour right-2 bottom-2 rounded-full p-3 text-2xl"
@@ -33,9 +27,7 @@ export const Card = ({ href, card }: { href: string; card: TCard }) => {
       </div>
       <div className="flex flex-col gap-2">
         <p className="text-white font-semibold">{card.title}</p>
-        <p className="text-lessFocusColour text-sm font-medium">
-          {card.description}
-        </p>
+        <p className="text-lessFocusColour text-sm font-medium">{card.description}</p>
       </div>
     </Link>
   );
