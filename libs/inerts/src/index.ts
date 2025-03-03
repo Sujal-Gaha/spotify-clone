@@ -11,7 +11,6 @@ export * from './featured-charts';
 export * from './fresh-new-music';
 export * from './home-all-content';
 export * from './moods';
-export * from './playlist-bar';
 export * from './recents';
 export * from './recommendations';
 export * from './search-genre';

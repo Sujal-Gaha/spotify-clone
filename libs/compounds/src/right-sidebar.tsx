@@ -3,7 +3,6 @@ import { BsThreeDots } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
 import { AddedQuark } from '@spotify-clone/libs/quarks';
 import { LuMusic3 } from 'react-icons/lu';
-import { useState } from 'react';
 import { IoPlay } from 'react-icons/io5';
 import { ButtonAlkali } from '@spotify-clone/libs/alkalis';
 
@@ -148,23 +147,17 @@ const Merch = () => {
 };
 
 const NextInQueue = () => {
-  const [isHovering, setIsHovering] = useState<boolean>(false);
-
   return (
-    <div className="bg-smallerSectionColour w-[388px] h-[119px] rounded-xl p-4 flex flex-col justify-center gap-1">
+    <div className="bg-smallerSectionColour w-[388px] rounded-xl p-4 flex flex-col justify-center gap-1">
       <div className="w-full h-[25px] flex justify-between items-center">
         <span className="text-white font-semibold">Next in queue</span>
         <span className="text-lessFocusColour text-sm hover:underline cursor-pointer hover:text-white duration-150 ease-in-out">
           Open queue
         </span>
       </div>
-      <div
-        className="w-full h-[62px] p-2 rounded-lg flex items-center justify-start gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-300 cursor-pointer"
-        onMouseOver={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        {isHovering ? <IoPlay className="text-lessFocusColour" /> : <LuMusic3 className="text-lessFocusColour" />}
-
+      <div className="w-full h-[62px] p-2 rounded-lg flex items-center justify-start gap-3 hover:bg-hoverSmallerSectionColour ease-in-out duration-300 cursor-pointer group">
+        <IoPlay className="text-lessFocusColour hidden group-hover:block h-3.5 w-3.5" />
+        <LuMusic3 className="text-lessFocusColour block group-hover:hidden h-3.5 w-3.5" />
         <img alt="" src="/albumCoverRight.png" height={45} width={45} className="roundex-xl" />
         <div>
           <p className="text-white font-semibold">Starboy</p>

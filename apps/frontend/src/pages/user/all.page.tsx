@@ -16,7 +16,7 @@ export const AllPage = () => {
                   Show all
                 </p>
               </div>
-              <div className="h-[282px] flex">
+              <div className="h-[282px] grid grid-cols-5 grid-rows-1">
                 {allContent.content.map((cardContent) => {
                   return (
                     <Card
