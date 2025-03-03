@@ -1,5 +1,7 @@
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 import { AppleLoginQuark, FacebookLoginQuark, GoogleLoginQuark, LogoDarkQuark } from '@spotify-clone/libs/quarks';
+import { Eye, EyeClosed, EyeIcon } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ContinueWithExternalService = () => {
@@ -27,6 +29,8 @@ const ContinueWithExternalService = () => {
 };
 
 export const LoginPage = () => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
   return (
     <main>
       <nav className="p-6 flex items-center justify-center border-b border-[#D9DADC]">
@@ -52,12 +56,25 @@ export const LoginPage = () => {
                 <label htmlFor="password" className="text-black font-bold text-[13px]">
                   Password
                 </label>
-                <input
-                  id="password"
-                  type="text"
-                  className="rounded-md p-3.5 border border-[#878787] placeholder:text-[#878787]"
-                  placeholder="Password"
-                />
+                <div className="relative w-full">
+                  <input
+                    id="password"
+                    type={isPasswordVisible ? 'text' : 'password'}
+                    className="rounded-md p-3.5 border border-[#878787] placeholder:text-[#878787] w-full"
+                    placeholder="Password"
+                  />
+                  {isPasswordVisible ? (
+                    <Eye
+                      className="absolute right-4 top-4 text-[#878787] cursor-pointer"
+                      onClick={() => setIsPasswordVisible(false)}
+                    />
+                  ) : (
+                    <EyeClosed
+                      className="absolute right-4 top-4 text-[#878787] cursor-pointer"
+                      onClick={() => setIsPasswordVisible(true)}
+                    />
+                  )}
+                </div>
               </div>
               <Link to={_FULL_ROUTES.FORGOT_PASSWORD} className="text-lg font-medium underline">
                 Forgot your password?
