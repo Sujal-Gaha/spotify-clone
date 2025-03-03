@@ -4,16 +4,13 @@ const { join } = require('path');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
+    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {
       colors: {
-        mainColour: '#1ED760',
+        primary: '#1ED760',
         sectionColour: '#191919',
         lessFocusColour: '#B3B3B3',
         buttonColour: '#232323',

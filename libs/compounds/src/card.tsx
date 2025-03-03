@@ -18,7 +18,7 @@ export const Card = ({ href, card }: { href: string; card: TCard }) => {
         <img alt="album" src={card.image} height={205} width={205} className="rounded-lg" />
         {isHovering ? (
           <motion.div
-            className="absolute bg-mainColour right-2 bottom-2 rounded-full p-3 text-2xl"
+            className="absolute bg-primary right-2 bottom-2 rounded-full p-3 text-2xl"
             whileHover={{ scale: 1.1 }}
           >
             <FaPlay className="ml-1" />

@@ -30,7 +30,7 @@ export const Playlistbar = () => {
             </div>
             <div>
               {isHovering ? (
-                <motion.div className="bg-mainColour rounded-full p-1.5 text-sm mr-3" whileHover={{ scale: 1.2 }}>
+                <motion.div className="bg-primary rounded-full p-1.5 text-sm mr-3" whileHover={{ scale: 1.2 }}>
                   <FaPlay className="ml-1" />
                 </motion.div>
               ) : null}
