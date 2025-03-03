@@ -9,6 +9,7 @@ import { MusicPage } from '../pages/user/music.page';
 import { GenrePage } from '../pages/user/genre.page';
 import { LoginPage } from '../pages/user/login.page';
 import { RegisterPage } from '../pages/user/register.page';
+import { ForgotPasswordPage } from '../pages/user/forgot-password.page';
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
   {
     path: _FULL_ROUTES.REGISTER,
     element: <RegisterPage />,
+  },
+  {
+    path: _FULL_ROUTES.FORGOT_PASSWORD,
+    element: <ForgotPasswordPage />,
   },
 
   {

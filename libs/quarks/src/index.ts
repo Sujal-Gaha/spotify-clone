@@ -14,6 +14,10 @@ export * from './audio-controller-quark/queue.quark';
 export * from './audio-controller-quark/shuffle-playlist.quark';
 export * from './audio-controller-quark/time-played.quark';
 
+export * from './auth-quark/apple-login.quark';
+export * from './auth-quark/facebook-login.quark';
+export * from './auth-quark/google-login.quark';
+
 export * from './premium-page-quark/amex.quark';
 export * from './premium-page-quark/dci.quark';
 export * from './premium-page-quark/earth.quark';
@@ -35,6 +39,7 @@ export * from './service-quark/fourth-service.quark';
 export * from './coloured-play.quark';
 export * from './download.quark';
 export * from './library.quark';
+export * from './logo.dark.quark';
 export * from './more-options.quark';
 export * from './pause.quark';
 export * from './play.quark';
