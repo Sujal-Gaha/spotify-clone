@@ -1,6 +1,6 @@
 import { _FULL_ROUTES } from '@spotify-clone/libs/catalysts';
 import { AppleLoginQuark, FacebookLoginQuark, GoogleLoginQuark, LogoDarkQuark } from '@spotify-clone/libs/quarks';
-import { Eye, EyeClosed, EyeIcon } from 'lucide-react';
+import { Eye, EyeClosed } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
