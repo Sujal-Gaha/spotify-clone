@@ -7,6 +7,8 @@ import { PodcastsPage } from '../pages/user/podcasts.page';
 import { PremiumPage } from '../pages/user/premium.page';
 import { MusicPage } from '../pages/user/music.page';
 import { GenrePage } from '../pages/user/genre.page';
+import { LoginPage } from '../pages/user/login.page';
+import { RegisterPage } from '../pages/user/register.page';
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +40,15 @@ export const router = createBrowserRouter([
         element: <GenrePage />,
       },
     ],
+  },
+
+  {
+    path: _FULL_ROUTES.LOGIN,
+    element: <LoginPage />,
+  },
+  {
+    path: _FULL_ROUTES.REGISTER,
+    element: <RegisterPage />,
   },
 
   {
