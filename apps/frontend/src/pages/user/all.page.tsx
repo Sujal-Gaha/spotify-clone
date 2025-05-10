@@ -3,6 +3,7 @@ import { Card } from '@spotify-clone/libs/compounds';
 import { Playlistbar, Footer } from '@spotify-clone/libs/crystals';
 
 export const AllPage = () => {
+  console.log("This is all page")
   return (
     <div className="flex flex-col overflow-y-auto px-5 w-full pt-2 no-scrollbar">
       <Playlistbar />
